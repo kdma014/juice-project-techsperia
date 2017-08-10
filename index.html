@@ -9,8 +9,7 @@
 
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-
+        <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/styles.css">
 
@@ -19,27 +18,29 @@
 <body>
 
 
-<!-- main header and navbar @ for all pages -->
+<!-- 
+@ main header and navbar @ for all pages 
+-->
 <header class="main-header" id="headerMain">
     <div class="container">
         <div class="row">
             
-            <div class="logo">
+            <div class="logo col-md-4 col-sm-3">
                 <h1 hidden>[[Site Title]]</h1>
                 <div class="logo-container">
-                    <img src="img/branding/site-logo_dark.png" alt="Site Name">
+                    <img src="img/branding/site-logo_dark.png" alt="Site Name" width="128">
                 </div>
             </div>
 
-            <nav class="nav">
-                <ul id="navMain">
-                    <li class="nav-link"><a href="#">Services</a></li>
-                    <li class="nav-link"><a href="#">Salon</a></li>
-                    <li class="nav-link"><a href="#">Salon Finder</a></li>
-                    <li class="nav-link"><a href="#">Products</a></li>
-                    <li class="nav-link"><a href="#">Get the Look</a></li>
-                    <li class="nav-link"><a href="#">Academy</a></li>
-                    <li class="nav-button"><a href="#">Franchise</a></li>
+            <nav class="nav col-md-8 col-sm-9">
+                <ul id="navMain" class="inline-block">
+                    <li ><a href="#">Services</a></li>
+                    <li ><a href="#">Salon</a></li>
+                    <li ><a href="#">Salon Finder</a></li>
+                    <li ><a href="#">Products</a></li>
+                    <li ><a href="#">Get the Look</a></li>
+                    <li ><a href="#">Academy</a></li>
+                    <li class="nav-button"><a href="#">Book Now</a></li>
                 </ul>
 
                 <button class="nav-toggle">X</button>
@@ -50,10 +51,81 @@
 </header>
 
 
+<!-- 
+@ Main Page Carousel 
+-->
+<aside id="sliderMain" class="main-slider">
+    <div class="slider--content container-fluid">
+        
+        <div class="slides">
+            
+            <div class="slide">
+                <div class="bg-image"></div>
+                <div class="text-box">
+                    <h3>Lorem Ipsum Doler Sit Amet</h3>
+                    <p>Sed non dapibus mauris. Donec efficitur est nec risus varius iaculis. Proin sapien orci</p>
+                    <a href="#" class="action-link">Read story</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="bg-image"></div>
+                <div class="text-box">
+                    <h3>Lorem Ipsum Doler Sit Amet</h3>
+                    <p>Sed non dapibus mauris. Donec efficitur est nec risus varius iaculis. Proin sapien orci</p>
+                    <a href="#" class="action-link">Read story</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="bg-image"></div>
+                <div class="text-box">
+                    <h3>Lorem Ipsum Doler Sit Amet</h3>
+                    <p>Sed non dapibus mauris. Donec efficitur est nec risus varius iaculis. Proin sapien orci</p>
+                    <a href="#" class="action-link">Read story</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</aside>
 
 
+<!-- 
+@ User greet, links and cart 
+-->
 
 
+<nav class="user-toolbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 pull-left">
+                <span>Good evening [[User's name]]</span>
+            </div>
+
+            <div class="col-sm-3 pull-right">
+                <a href="#" title="Add products to your cart" class="cart"> <i class="cart-icon"></i> <span>Your cart's empty</span></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- 
+<nav class="user-toolbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 pull-left">
+                <span>Good evening [[User's name]]</span>
+            </div>
+
+            <div class="col-sm-3 pull-right">
+                <a href="#" title="Add products to your cart" class="cart"> <i class="cart-icon"></i> <span>1 item(s)</span></a>
+            </div>
+        </div>
+    </div>
+</nav>
+-->
 
 
 
