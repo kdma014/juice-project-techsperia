@@ -1,5 +1,5 @@
 /*
-* Stylesheet File for use on [SiteName]
+* Stylesheet File for use on JUICE's Website
 *
 * @ Not for use anywhere else without prior permission from the authors
 * @ Created and maintained by Techsperia
@@ -7,3 +7,348 @@
 */
 
 
+html, body {
+	font-family: "Open Sans", Arial, sans-serif;
+	background-color: #fff;
+	line-height: 1.6;
+}
+
+
+a {
+	text-decoration: underline;
+	color: #333;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #333;
+}
+
+a:focus, a:active {
+	text-decoration: underline;
+	color: #080808;
+}
+
+
+b {
+	font-weight: 600;
+}
+
+
+
+/*************************************************
+Theme
+@ Custom buttons 
+@ Custom Dialog Boxes
+@ Custom Modals
+*************************************************/
+
+/* Button Links */
+
+.links-btn {
+	display: inline-block;
+	padding: 0.7em 1.5em;
+	margin: 0.5em 0;
+	
+	border: 1px solid #333;
+	background-color: #fff;
+	color: #333;
+	font-size: .9em;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+
+.links-btn.rounded-corners {
+	border-radius: 10px;
+}
+
+.links-btn.no-border {
+	border: 0 solid transparent;
+}
+
+.links-btn:hover {
+	text-decoration: none;
+	color: #333;
+	background-color: #efefef;
+}
+
+.links-btn:active, .links-btn:focus {
+	color: #333;
+	text-decoration: none;
+}
+
+.links-btn.btn-inverted {
+	color: #fff;
+	background-color: #333;
+	border-color: #fff;
+}
+
+.links-btn.btn-inverted:hover {
+	color: #fff;
+	background-color: #111;
+}
+
+
+.links-btn.btn-shadow {
+	box-shadow: 3px 3px 0 #222;
+}
+
+.links-btn.btn-shadow__yellow {
+	box-shadow: 3px 3px 0 #faff4c;
+}
+
+.links-btn.btn-shadow__pink {
+	box-shadow: 3px 3px 0 #ffb3e1;
+}
+
+/* Links */
+.link-highlighted {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.link-highlighted:hover,
+.link-highlighted:active,
+.link-highlighted:focus {
+	text-decoration: none;
+}
+
+
+.link-highlighted::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0px;
+	height: 4px;
+	background-color: rgba(255, 249, 0, 0.65);
+
+	-webkit-transition: 0.1s all ease-in-out;
+	-moz-transition: 0.1s all ease-in-out;
+	transition: 0.1s all ease-in-out;
+}
+
+.link-highlighted:hover::before {
+	bottom: 2px;
+	opacity: 0.8;
+}
+
+
+.link-highlighted.pink::before {
+	background-color: #ffb3e1;
+}
+
+.link-highlighted.black::before {
+	background-color: #333;
+}
+
+.link-highlighted.inverted::before {
+	background-color: #fff ;
+}
+
+
+
+
+/****************************
+Bootstrap Navigation Theme
+****************************/
+.navbar-nav > li > a,
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.dropdown-menu {
+	border: 1px solid ;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.dropdown-menu ul li {
+
+}
+
+.dropdown-menu ul li a {
+	text-decoration: none ;
+}
+
+@media (min-width: 768px) {
+	
+}
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------
+* Black & White Form Style
+---------------------------------*/
+
+.form-general {
+
+}
+
+.form-general .input-block {
+  margin-bottom: 1em;
+}
+
+.form-general label {
+  display: inline-block;
+  padding: 0.25em 0;
+  margin: 0.25em 0;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.form-general input[type="text"], 
+.form-general input[type="email"], 
+.form-general input[type="password"], 
+.form-general input[type="number"] {
+  font-size: 0.9em;
+  padding: 0.75em 1em;
+  border: 2px solid #222;
+  outline: 2px solid transparent;
+  
+  -webkit-transition: 0.1s all ease-in-out;
+     -moz-transition: 0.1s all ease-in-out;
+          transition: 0.1s all ease-in-out;
+} 
+
+.form-general input[type="text"]:focus, 
+.form-general input[type="email"]:focus, 
+.form-general input[type="password"]:focus, 
+.form-general input[type="number"]:focus {
+  outline: 3px solid #111;
+}
+
+.form-general select {
+  padding: 0.5em 1em;
+  padding-right: 2em;
+  border: 2px solid #222;
+  background-color: #fff;
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0MDcuNDM3IDQwNy40MzciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQwNy40MzcgNDA3LjQzNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+Cjxwb2x5Z29uIHBvaW50cz0iMzg2LjI1OCw5MS41NjcgMjAzLjcxOCwyNzMuNTEyIDIxLjE3OSw5MS41NjcgMCwxMTIuODE1IDIwMy43MTgsMzE1Ljg3IDQwNy40MzcsMTEyLjgxNSAiIGZpbGw9IiMwMDAwMDAiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+  background-position: right 0.6em center;
+  background-size: 0.8em 0.8em;
+  background-repeat: no-repeat;
+  outline: 2px solid transparent;
+  
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-transition: 0.1s all ease-in-out;
+     -moz-transition: 0.1s all ease-in-out;
+          transition: 0.1s all ease-in-out;
+
+}
+
+.form-general select:focus {outline-color: #222;}
+.form-general select::-ms-expand {display: none;}
+
+
+.general-checkbox-input,
+.general-radio-input {
+  position: relative;
+  cursor: pointer;
+}
+
+.general-checkbox-input > label,
+.general-radio-input > label{
+  margin-left: 0.5rem;
+}
+
+.checkbox, 
+.radio {
+    position: relative;
+    top: -1rem;
+    margin: 0 1rem 0 0;
+    cursor: pointer;
+  
+    -webkit-appearance: none;
+            appearance: none;
+}
+
+.checkbox:before, 
+.radio:before {
+    -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+           transition: all 0.1s ease-in-out;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.checkbox:checked::before {
+  background-size: 75%;
+}
+
+.checkbox:before {
+    border: 2px solid #333;
+  
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDM0Mi4zNTcgMzQyLjM1NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzQyLjM1NyAzNDIuMzU3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCI+Cjxwb2x5Z29uIHBvaW50cz0iMjkwLjA0LDMzLjI4NiAxMTguODYxLDIwNC40MjcgNTIuMzIsMTM3LjkwNyAwLDE5MC4yMjYgMTE4Ljg2MiwzMDkuMDcxIDM0Mi4zNTcsODUuNjA2ICIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+  background-size: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+.checkbox:hover:before,
+.checkbox:focus:before{
+  border-color: #111;
+}
+
+.radio:before {
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 50%;
+}
+.radio:checked:before {
+    border-color: #111;
+    background-color: #111;
+    box-shadow: inset 0 0 0 2px #fff;
+}
+
+
+
+.form-general .submit-button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 0.75em 1.5em;
+  border: none;
+  border: 2px solid ;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  font-weight: 500;
+  
+}
+
+.form-general .submit-button:hover {
+  background-color: #eee;
+  border-color: #111;
+}
+
+.form-general .submit-button.black {
+  border-color: #111;
+  color: #fff;
+  background-color: #111;
+}
+
+.form-general .submit-button.black:hover {
+  border-color: #222;
+  background-color: #222;
+}

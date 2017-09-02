@@ -1,10 +1,13 @@
-/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+/*! Based on HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
 
 /*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+* Stylesheet File for use on JUICE's Website
+*
+* @ Not for use anywhere else without prior permission from the authors
+* @ Created and maintained by Techsperia
+*
+*/
+
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -25,12 +28,12 @@ html {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #ffd6e3;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #ffd6e3;
     text-shadow: none;
 }
 
@@ -91,17 +94,389 @@ html, body {
 }
 
 
+/********************************************
+HEADER AND MAIN NAV
+********************************************/
+.main-header {
+    background-color: #fff;
+    padding: 1px 0;
+}
+
+
+
+/* Main Navbar  */
+#navbarMain {
+    text-align: center;      
+    margin: 0 auto;  
+}
+
+#navbarMain .navbar-nav li a {
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 5px 5px;
+    margin: 15px 0;
+    margin-right: 20px;
+}
+
+#navbarMain .navbar-nav li a.nav-btn {
+    border: 1px solid ;
+    width: 100px;
+    text-align: center;
+    margin: 15px auto;
+    transition: 0.1s all ease-in-out;
+}
+
+#navbarMain .navbar-nav li a.nav-btn:hover {
+    background: #222;
+    color: #fff;
+}
+
+
+/* Nav links Hover Effect */
+#navbarMain .navbar-nav li a.nav-link span:first-child {
+    position: relative;
+    display: inline-block;
+}
+
+#navbarMain .navbar-nav li a.nav-link span:first-child::before {
+    position: relative;
+    content: "";
+    position: absolute;
+    display: inline;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    width: 0;
+    height: 4px;
+    background-color: rgba(255, 249, 0, 0.0);
+    
+    -webkit-transition: 0.1s all ease-in-out;
+       -moz-transition: 0.1s all ease-in-out;
+            transition: 0.1s all ease-in-out;
+}
+
+#navbarMain .navbar-nav li a.nav-link:hover span:first-child::before,
+#navbarMain .navbar-nav li.active a.nav-link span:first-child::before {
+        position: relative;
+        content: "";
+        position: absolute;
+        display: inline;
+        left: 0;
+        right: 0;
+        bottom: 3px;
+        width: 100%;
+        height: 4px;
+        background-color: rgba(255, 249, 0, 0.65);
+    
+        -webkit-transition: 0.2s all ease-in-out;
+           -moz-transition: 0.2s all ease-in-out;
+                transition: 0.2s all ease-in-out;
+    } 
+
+
+
+/* Secondary Book now button */
+#book_now_1 {
+    display: inline-block;
+    margin: 14px 10px;
+    padding: 4px 15px;
+    border: 2px solid #222;
+    text-decoration: none;
+    border-radius: 32px;
+    font-weight: 400;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}    
+
+#book_now_1:hover {
+    background: #222;
+    color: #fff;
+}
+
+
+
+#navbarMain .navbar-toggle {
+    padding: 0px 0px;
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 14px;
+    border: none;
+
+    width: 25px;
+    height: 26px;
+}
+
+#navbarMain .navbar-toggle span > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#navbarMain .navbar-toggle .close-icon,
+#navbarMain .navbar-toggle .open-icon {
+    vertical-align: middle;
+    display: none;
+    transform: rotate(0deg);
+    opacity: 0;
+
+    animation: rotateIcon 0.2s linear forwards;
+}
+
+#navbarMain .navbar-toggle .open-icon {
+    display: inline-block;
+    transform: rotate(0deg);
+    opacity: 0;
+}
+
+
+#navbarMain .navbar-toggle:not(.collapsed) .close-icon {
+    display: inline-block;
+    transform: rotate(0deg);
+    opacity: 0;
+}
+
+#navbarMain .navbar-toggle:not(.collapsed) .open-icon {
+    display: none;
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+}
+
+
+
+@media (min-width: 768px) { 
+
+    #navbarMain .navbar-nav li a.nav-link span:first-child::before  {
+        display: none !important;
+    }
+
+    #navbarMain .navbar-nav li a.nav-link::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 2%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        height: 4px;
+        background-color: rgba(255, 249, 0, 0);
+    
+        -webkit-transition: 0.2s all ease-in-out;
+        -moz-transition: 0.2s all ease-in-out;
+        transition: 0.2s all ease-in-out;
+    }
+    
+    #navbarMain .navbar-nav li a.nav-link:hover::before,
+    #navbarMain .navbar-nav li.active a.nav-link::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        height: 4px;
+        background-color: rgba(255, 249, 0, 0.65);
+    
+        -webkit-transition: 0.2s all ease-in-out;
+        -moz-transition: 0.2s all ease-in-out;
+        transition: 0.2s all ease-in-out;
+    } 
+
+
+    #book_now_1 {
+        display: none;
+    }
+}
 
 
 
 
 
+/************************************************************************
+* MAIN SECTION :
+*  GENERIC STYLES FOR SIMILAR PAGES
+*  INDIVIDUAL PAGES AND STYLINGS
+* 
+************************************************************************/
+
+.main-section {
+    position: relative;
+}
+
+
+/* A full width container with a background image */
+.main-section > .bg-image-stripe {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    background-color: #222;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-section > .bg-image-stripe > img {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@media (min-width: 576px) {
+
+    #salon_finder .bg-image-stripe > img {
+        top: -280px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    #salon_finder .bg-image-stripe > img {
+        top: -450px;
+    }
+
+}
 
 
 
 
+/*
+* Salon Finder Page
+*/
+#salonFinderContainer {
+    background-color: #eee;
+    padding: 0;
+}
+
+.salon-finder-box {
+    position: relative;
+    background-color: #111;
+    color: #fff;
+
+    transition: 0.1s all ease-in-out;
+}
+
+.salon-finder-box .salon-finder-header {
+    padding: 20px 20px;
+}
+
+.salon-finder-header .search-header-blocks {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.salon-finder-header .salon-finder-input {
+    position: relative;
+}
+
+.salon-finder-header .salon-finder-input input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 0.5em 0;
+
+    border: 0;
+    border-bottom: 2px solid #666;
+    outline: 0;
+    background-color: transparent;
+}
+
+.salon-finder-header .salon-finder-input input[type="text"]:focus {
+    border-bottom-color: #fff;
+}
+
+.salon-finder-header .salon-location-submit button {
+    position: relative;
+
+    -webkit-appearance: none;
+            appearance: none;
+
+    border: none;
+    background-color: white;    
+    color: #222;
+    font-weight: 700; 
+       
+    width: 100px;
+    margin: 0 auto;
+    padding: 0.5em 0;
+
+    box-shadow: 2px 2px 0 black, 6px 6px 0 yellow;
+}
+
+.salon-finder-header .salon-location-submit button:hover {
+    background-color: #eee;
+}
 
 
+
+
+.typeahead-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: left;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.4);
+}
+
+.typeahead-list > ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+
+.typeahead-list > ul li {
+    cursor: pointer;
+    background-color: #fff;
+    color: #222;
+    padding: 0.5em 20px;
+
+    -webkit-transition: 0.1s all ease-in-out;
+       -moz-transition: 0.1s all ease-in-out;
+            transition: 0.1s all ease-in-out;
+}
+
+.typeahead-list > ul li:hover {
+    background-color: #eee;
+}
+
+.typeahead-list > ul li:active {
+    background-color: #222;
+    color: #fff;
+}
+
+
+@media (min-width: 768px) {
+    .salon-finder-box .salon-finder-header {
+        padding: 60px 80px;
+    }
+
+    #salonFinderContainer {
+        padding: 0 20px;
+    }
+
+    .salon-finder-box {
+        max-width: 75%;
+        margin: 0 auto;
+        margin-top: 0;
+        
+        /* pull it to the top */
+        top: -160px;
+    }
+
+}
 
 
 

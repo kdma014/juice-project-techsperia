@@ -22,32 +22,87 @@
 @ main header and navbar @ for all pages 
 -->
 <header class="main-header" id="headerMain">
-    <div class="container">
-        <div class="row">
-            
-            <div class="logo col-md-4 col-sm-3">
-                <h1 hidden>[[Site Title]]</h1>
-                <div class="logo-container">
-                    <img src="img/branding/site-logo_dark.png" alt="Site Name" width="128">
+
+            <nav class="navbar" id="navbarMain">
+              <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+
+                  <a id="book_now_1" class="pull-right" href="#">
+                      <span>Book Now</span>
+                  </a>
+
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-main" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="open-icon">
+                        <img src="img/icons/menu.svg" width="16">
+                    </span>
+                    <span class="close-icon">
+                        <img src="img/icons/cancel.svg" width="16">
+                    </span>
+                  </button>
+
+                  
+                  <a class="navbar-brand" href="#" title="Juice">
+                        <img alt="Brand" src="img/branding/site-logo_dark.png" width="128px">
+                   </a>
                 </div>
-            </div>
 
-            <nav class="nav col-md-8 col-sm-9">
-                <ul id="navMain" class="inline-block">
-                    <li ><a href="#">Services</a></li>
-                    <li ><a href="#">Salon</a></li>
-                    <li ><a href="#">Salon Finder</a></li>
-                    <li ><a href="#">Products</a></li>
-                    <li ><a href="#">Get the Look</a></li>
-                    <li ><a href="#">Academy</a></li>
-                    <li class="nav-button"><a href="#">Book Now</a></li>
-                </ul>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-navbar-main">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                         <a class="nav-link" href="#"><span>Services</span> <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                         <a class="nav-link" href="salon-finder.html"><span>Salon Finder</span></a>
+                    </li>
 
-                <button class="nav-toggle">X</button>
+                    <!-- <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><span>Dropdown 1</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>Dropdown 2</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>Dropdown 3</span></a>
+                        </li>
+                      </ul>
+                    </li> -->
+
+                    <li>
+                         <a class="nav-link" href="#"><span>Products</span></a>
+                    </li>
+
+                    <li>
+                         <a class="nav-link" href="#"><span>Get the look</span></a>
+                    </li>
+
+                    <li>
+                         <a class="nav-link" href="#"><span>Academy</span></a>
+                    </li>
+
+                     <li>
+                         <a class="nav-link" href="#"><span>Franchise</span></a>
+                    </li>
+
+                    <li>
+                         <a class="nav-btn hidden-xs" href="#">Button</a>
+                    </li>
+
+                  </ul>
+
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
             </nav>
+</header>
 
-        </div>
-    </div>
+
+<header>
+    
 </header>
 
 
@@ -130,12 +185,69 @@
 
 
 
+<!--
+@ Instagram Slide Section
+-->
+<aside class="content-section instagram-feed">
+    <div class="instagram-feed-container">
+        <header>
+            <h3><img src="img/instagram-logo.png" alt="IG Logo"> <span>Find out what our customers are saying</span></h3>
+            <a href="button large-shadow yellow-color">Post your pic</a>
+        </header>
+
+        <div class="instagram-feed-carousel">
+            <div class="ig-feed-boxes">
+                <article class="ig-box">
+                    <img src="img/stocks/person-1.jpg">
+                    <p><a href="#">@some_user</a></p>
+                    <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
+                </article>
+
+                <article class="ig-box">
+                    <img src="img/stocks/person-2.jpg">
+                    <p><a href="#">@some_user</a></p>
+                    <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
+                </article>
+
+                <article class="ig-box">
+                    <img src="img/stocks/person-3.jpg">
+                    <p><a href="#">@some_user</a></p>
+                    <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
+                </article>
+
+                <article class="ig-box">
+                    <img src="img/stocks/person-4.jpg">
+                    <p><a href="#">@some_user</a></p>
+                    <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
+                </article>
+
+                <article class="ig-box">
+                    <img src="img/stocks/person-5.jpg">
+                    <p><a href="#">@some_user</a></p>
+                    <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
+                </article>
+
+                <article class="ig-box">
+                    <img src="img/stocks/person-6.jpg">
+                    <p><a href="#">@some_user</a></p>
+                    <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
+                </article>
+            </div>
+        </div>
+    </div>
+</aside>
+
+
+
+
     <!-- Styles -->
-    <link rel="stylesheet" href="css/owl-carousel.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
 
     <!-- Scripts and Resources -->
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
-    <script src="js/libs/owl.carousel.js"></script>
+    <script src="js/vendor/bootstrap.js"></script>
+    <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
