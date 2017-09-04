@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Lorem Ipsum Store | Range of Make Up Products, Beauty Tips, Fashion Trends Online in India</title>
+        <title>Find a JUICE Salon | JUICE Salon</title>
         <meta name="description" content="Make up products, beauty tips and videos, fashion trends in Mumbai, India">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,81 +22,49 @@
 @ main header and navbar @ for all pages 
 -->
 <header class="main-header" id="headerMain">
-            <nav class="navbar" id="navbarMain">
-              <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
+    <nav class="navbar" id="navbarMain">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
 
-                  <a id="book_now_1" class="pull-right" href="#">
-                      <span>Book Now</span>
-                  </a>
+          <a id="book_now_1" class="pull-right" href="#">
+              <span>Book Now</span>
+          </a>
 
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-main" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="open-icon">
-                        <img src="img/icons/menu.svg" width="16">
-                    </span>
-                    <span class="close-icon">
-                        <img src="img/icons/cancel.svg" width="16">
-                    </span>
-                  </button>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-main" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="open-icon">
+                <img src="img/icons/menu.svg" width="16">
+            </span>
+            <span class="close-icon">
+                <img src="img/icons/cancel.svg" width="16">
+            </span>
+          </button>
 
-                  
-                  <a class="navbar-brand" href="#" title="Juice">
-                        <img alt="Brand" src="img/branding/site-logo_dark.png" width="128px">
-                   </a>
-                </div>
+          
+          <a class="navbar-brand" href="#" title="Juice">
+                <img alt="Brand" src="images/logo.png" width="115px">
+           </a>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-navbar-main">
-                  <ul class="nav navbar-nav navbar-right">
-                    <li>
-                         <a class="nav-link" href="#"><span>Services</span> <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="active">
-                         <a class="nav-link" href="salon-finder.html"><span>Salon Finder</span></a>
-                    </li>
+        </div>
 
-                    <!-- <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                      <ul class="dropdown-menu">
-                        <li>
-                            <a href="#"><span>Dropdown 1</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span>Dropdown 2</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span>Dropdown 3</span></a>
-                        </li>
-                      </ul>
-                    </li> -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-navbar-main">
+        
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="nav-link" href="services.html"><span>Services</span> <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a class="nav-link" href="salon-finder.html"><span>Salon Finder</span></a></li>
+            <li><a class="nav-link" href="products.html"><span>Products</span></a></li>
+            <li><a class="nav-link" href="get-the-look.html"><span>Get the look</span></a></li>
+            <li><a class="nav-link" href="academy.html"><span>Academy</span></a></li>
+            <li><a class="nav-link" href="franchise.html"><span>Franchise</span></a></li>
+            <li><a class="nav-btn hidden-xs" href="book.html">Book</a></li>
+          </ul>
 
-                    <li>
-                         <a class="nav-link" href="#"><span>Products</span></a>
-                    </li>
+        </div><!-- /.navbar-collapse -->
 
-                    <li>
-                         <a class="nav-link" href="#"><span>Get the look</span></a>
-                    </li>
-
-                    <li>
-                         <a class="nav-link" href="#"><span>Academy</span></a>
-                    </li>
-
-                     <li>
-                         <a class="nav-link" href="#"><span>Franchise</span></a>
-                    </li>
-
-                    <li>
-                         <a class="nav-btn hidden-xs" href="#">Button</a>
-                    </li>
-
-                  </ul>
-
-                </div><!-- /.navbar-collapse -->
-              </div><!-- /.container-fluid -->
-            </nav>
+      </div><!-- /.container-fluid -->
+    </nav>
 </header>
 
 
@@ -112,10 +80,17 @@
     </div>
 
     <!-- Content -->
-    <div class="container">
-        
+    <section class="section-content">
+    <div class="section-content container">
+       
         <div class="row">
             <section class="col-md-12" id="salonFinderContainer">
+
+            <!-- decoration -->
+            <div class="decorate swirl" style="position: absolute;left: -30px;top: 60px;user-select: none;-webkit-user-drag: none; ">
+                    <img src="img/icons/swirl-decorate-128.png">
+            </div>
+            <!-- decoration end -->
 
             <!-- Store locator box -->
                 <div class="salon-finder-box">
@@ -137,18 +112,20 @@
                             </div>
 
                             <div class="search-header-blocks col-md-5 col-xs-8">
-                                <div class="salon-finder-input">
-                                    <form id="mapsLocationSearch" name="maps_location_search" method="get" action="">
-                                        <input id="locationName" type="text" name="place" placeholder="Enter your city..">
+                                <div class="salon-finder-input" id="pac_card">
+                                    <!--<form id="mapsLocationSearch" name="maps_location_search" method="get" action="">-->
+                                        <input class="controls" id="locationName" type="text" name="place" placeholder="Enter your city..">
                                         <input id="locationRadius" name="radius" value="50" type="hidden">
-                                    </form>
+                                    <!--</form>-->
 
+                                    <!-- 
+                                    USING Google's Autocomplete Instead
                                     <div id="typeAheadLocation" class="typeahead-list" style="display: block;">
                                         <ul>
                                             <li data-locationName="New York">New York</li>
                                             <li data-locationName="New Delhi">New Delhi</li>
-                                        </ul>
-                                    </div>
+                                        </ul></div> 
+                                    -->
                                 </div>
                             </div>
                             <div class="search-header-blocks col-md-3 col-xs-4">
@@ -159,13 +136,38 @@
                         </div>
                       </div>
                     </header>
-                    <div class="google-map-container" id="googlemaps_SalonFinder" style="height: 420px; background-color: #333;"></div>
+                    <!-- Google Map Salon Locator Canvas -->
+                    <div class="google-map-container" id="googlemaps_SalonFinder" style="height: 460px; background-color: #333;"></div>
+
+                    <!-- Salon List based on the searched location  -->
+                    <div class="salon-list-container">
+                        <div class="salon-list" id="salonLocationList">
+
+                            <!-- salon list item container and content -->
+                            <!-- <div class="col-sm-6 col-md-4 salon-location-item animated fadeIn" id="juice_salon_id_1">
+                                <div class="inner">
+                                    <h3 class="salon-name">Juice Andheri</h3>
+                                    <p class="salon-address">
+                                        345 Block B R Road,<br>
+                                        Near Sai Mandir<br>
+                                        Andheri East<br>
+                                        Mumbai, Maharashtra<br>
+                                        440033<br>
+                                    </p>
+                                </div>
+                            </div> -->
+
+                        </div>
+                    </div>
+
+
+
                 </div>
 
             </section>
         </div>
-
     </div>
+    </section>
 
 
 </main> <!-- main end -->
@@ -177,6 +179,8 @@
 
     
     <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.min.css">   
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/owl.carousel.css">   
 
@@ -189,7 +193,8 @@
 
 
     <!-- Page specific JS File -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3IzSGgAVTcz1CzkfJycSxLASGgLLmGqI&callback=initMap"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3IzSGgAVTcz1CzkfJycSxLASGgLLmGqI&libraries=places,geometry&callback=initMap"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
     <script>

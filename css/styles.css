@@ -8,7 +8,7 @@
 
 
 html, body {
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: "Montserrat", "Open Sans", Arial, sans-serif;
 	background-color: #fff;
 	line-height: 1.6;
 }
@@ -42,6 +42,44 @@ Theme
 @ Custom Dialog Boxes
 @ Custom Modals
 *************************************************/
+/* Decorations */
+.decorate {
+	display: block;
+	position: absolute;
+
+	-webkit-user-drag: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.decorate.verticallyReverse {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.decorate.horizontallyReverse {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.decorate.rotateRight {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform:  rotate(90deg);
+}
+
+.decorate.rotateLeft {
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	transform:  rotate(-90deg);
+}
+
+.decorate img {
+	max-width: 100%;
+	height: auto;
+}
 
 /* Button Links */
 
@@ -95,7 +133,7 @@ Theme
 }
 
 .links-btn.btn-shadow__yellow {
-	box-shadow: 3px 3px 0 #faff4c;
+	box-shadow: 3px 3px 0 #ffff5a;
 }
 
 .links-btn.btn-shadow__pink {
@@ -139,7 +177,7 @@ Theme
 
 
 .link-highlighted.pink::before {
-	background-color: #ffb3e1;
+	background-color: #ffff5a;
 }
 
 .link-highlighted.black::before {
@@ -215,7 +253,7 @@ Bootstrap Navigation Theme
 .form-general input[type="number"] {
   font-size: 0.9em;
   padding: 0.75em 1em;
-  border: 2px solid #222;
+  border: 1px solid #222;
   outline: 2px solid transparent;
   
   -webkit-transition: 0.1s all ease-in-out;
@@ -233,13 +271,13 @@ Bootstrap Navigation Theme
 .form-general select {
   padding: 0.5em 1em;
   padding-right: 2em;
-  border: 2px solid #222;
+  border: 1px solid #222;
   background-color: #fff;
   background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0MDcuNDM3IDQwNy40MzciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQwNy40MzcgNDA3LjQzNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+Cjxwb2x5Z29uIHBvaW50cz0iMzg2LjI1OCw5MS41NjcgMjAzLjcxOCwyNzMuNTEyIDIxLjE3OSw5MS41NjcgMCwxMTIuODE1IDIwMy43MTgsMzE1Ljg3IDQwNy40MzcsMTEyLjgxNSAiIGZpbGw9IiMwMDAwMDAiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
   background-position: right 0.6em center;
   background-size: 0.8em 0.8em;
   background-repeat: no-repeat;
-  outline: 2px solid transparent;
+  outline: 1px solid transparent;
   
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -352,3 +390,93 @@ Bootstrap Navigation Theme
   border-color: #222;
   background-color: #222;
 }
+
+
+
+
+
+/* Google Maps PAC Styles Override */
+
+
+/* PAC - Google Places API */
+.pac-container {
+    background-color: #fff;
+    position: absolute!important;
+    z-index: 1000;
+    border-radius: 0px;
+    border-top: 1px solid #d9d9d9;
+    font-family: Arial, sans-serif;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    border-radius: 0 0 8px 8px;
+}
+.pac-container.pac-logo:after {
+    content: "";
+    padding: 1px 1px 1px 0;
+    height: 40px;
+    text-align: right;
+    display: block;
+    background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+.pac-container .hdpi.pac-logo:after {
+    background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)
+}
+
+
+
+.pac-container .pac-item {
+    cursor: default;
+    padding: 0.5em 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 30px;
+    text-align: left;
+    border-top: none;
+    font-size: 16px;
+    color: #999
+}
+.pac-container .pac-item:hover {
+    background-color: #eee;
+}
+.pac-container.pac-item-selected,
+.pac-container .pac-item-selected:hover {
+    color: #fff;
+    background-color: #607D8B
+}
+.pac-container .pac-matched {
+    font-weight: 700
+}
+
+.pac-container .pac-item-query {
+    font-size: initial;
+    padding-right: 3px;
+    color: #000
+}
+.pac-icon {
+    width: 0px;
+    height: 0px;
+}
+.hdpi .pac-icon {
+    background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)
+}
+.pac-icon-search {
+    background-position: -1px -1px
+}
+.pac-item-selected .pac-icon-search {
+    background-position: -18px -1px
+}
+.pac-icon-marker {
+    background-position: -1px -161px
+}
+.pac-item-selected .pac-icon-marker {
+    background-position: -18px -161px
+}
+.pac-placeholder {
+    color: gray
+}
+
