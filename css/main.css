@@ -121,14 +121,16 @@ HEADER AND MAIN NAV
 }
 
 #navbarMain .navbar-nav li a {
-    font-size: 0.9em;
-    font-weight: 500;
+    font-size: 1em;
+    font-weight: 400;
     padding: 5px 5px;
     margin: 15px 0;
     margin-right: 20px;
 }
 
 #navbarMain .navbar-nav li a.nav-btn {
+    font-family: "Montserrat";
+    font-weight: 500;
     border: 1px solid ;
     width: 100px;
     text-align: center;
@@ -328,6 +330,14 @@ HEADER AND MAIN NAV
 }
 
 
+.main-section .section-header {
+    padding: 4em 0;
+}
+
+.main-section .section-main {
+    padding: 4em 0;
+}
+
 /* A full width container with a background image */
 .main-section > .bg-image-stripe {
     position: relative;
@@ -381,6 +391,7 @@ HEADER AND MAIN NAV
     display: inline-block;
     margin: 0;
     padding: 20px 40px;
+    font-weight: 400;
     font-size: 16px;
     font-size: 1em;
     font-size: 1rem;
@@ -405,8 +416,9 @@ HEADER AND MAIN NAV
     padding: 10px 15px;
     margin: 10px 15px;
 
+    font-family: "Montserrat", "Oxygen", "Open Sans", Helvetica, Arial, sans-serif;
     font-size: 0.9em;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: none;
 
     border: 2px solid #111;
@@ -565,7 +577,7 @@ HEADER AND MAIN NAV
     border: none;
     background-color: white;    
     color: #222;
-    font-weight: 700; 
+    font-weight: 500; 
        
     width: 100px;
     margin: 0 auto;
@@ -676,7 +688,7 @@ HEADER AND MAIN NAV
 }
 
 .salon-list .salon-location-item .inner h3 {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1em;
     margin: 0;
     letter-spacing: 0.05em;
@@ -748,7 +760,7 @@ Product Page:
   position: relative;
   display: block;
   border-radius: 5px;
-  font-weight: 600;
+  font-weight: 500;
   text-align: left;
   margin: 1em auto;
   transition: 0.1s all ease-in-out;
@@ -884,6 +896,13 @@ Product Page:
   padding: 0.5em 0;
 }
 
+.popup-dialog .popup-header img,
+.popup-dialog .popup-header i,
+.popup-dialog .popup-header span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .popup-dialog .close-btn {
   display: block;
   font-family: "Consolas", monospace;
@@ -939,7 +958,7 @@ Product Page:
 }
 
 .filter-screen > form ._z {
-  font-size: 0.9em;
+  font-size: 1em;
   min-width: 110px;
 }
 

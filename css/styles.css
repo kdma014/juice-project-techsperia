@@ -8,7 +8,7 @@
 
 
 html, body {
-	font-family: "Montserrat", "Open Sans", Arial, sans-serif;
+	font-family: "Oxygen", "Open Sans", Arial, sans-serif;
 	background-color: #fff;
 	line-height: 1.6;
 }
@@ -34,6 +34,26 @@ b {
 	font-weight: 600;
 }
 
+
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Montserrat", "Oxygen", "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 500;
+}
+
+/* Font Families */
+.font-1 {
+	font-family: "Oxygen", "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.font-2 {
+	font-family: "Montserrat", "Oxygen", "Open Sans", Helvetica, Arial, sans-serif;
+}
 
 
 /*************************************************
@@ -82,7 +102,6 @@ Theme
 }
 
 /* Button Links */
-
 .links-btn {
 	display: inline-block;
 	padding: 0.7em 1.5em;
@@ -91,8 +110,8 @@ Theme
 	border: 1px solid #333;
 	background-color: #fff;
 	color: #333;
-	font-size: .9em;
-	font-weight: 700;
+	font-size: 1em;
+	font-weight: 400;
 	text-decoration: none;
 }
 
@@ -244,14 +263,14 @@ Bootstrap Navigation Theme
   display: inline-block;
   padding: 0.25em 0;
   margin: 0.25em 0;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 600;
 }
 .form-general input[type="text"], 
 .form-general input[type="email"], 
 .form-general input[type="password"], 
 .form-general input[type="number"] {
-  font-size: 0.9em;
+  font-size: 1em;
   padding: 0.75em 1em;
   border: 1px solid #222;
   outline: 2px solid transparent;

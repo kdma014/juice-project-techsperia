@@ -81,15 +81,19 @@ $( document ).ready(function(){
 	    $( target_elm ).fadeOut( 100 );
 	    $( target_elm ).removeClass( "active" );
 	  });
+
+	  e.preventDefault();
 	  
 	});
 	
-	$(".product-page-options .close-btn a").on("click", function(){
+	$(".product-page-options .close-btn a").on("click", function(e){
 	  // Find the target by using `this`'s data-target attribute
 	  var target_elm = $(this).data("target");
 	  
 	  // Show or hide the target element
 	  $( target_elm ).fadeOut( 100 );
+
+	  e.preventDefault();
 	});
 
 
