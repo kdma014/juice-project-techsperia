@@ -499,3 +499,63 @@ Bootstrap Navigation Theme
     color: gray
 }
 
+
+
+
+
+/*----------------------------
+Components: Image Card
+-----------------------------*/
+
+
+.image-card {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.image-card  .inner-container > img {
+  margin: 0 auto;
+}
+
+
+.image-card  .inner-container {
+	display: inline-block;
+	max-width: 220px;
+	min-width: 220px;
+}
+
+.image-card .caption-image-card {
+  position: relative;
+  margin: 0 10px;
+  padding: 1em 0.5em;
+
+  font-size: 0.9em;  
+  background-color: #111;
+  color: #fff;
+}
+
+.image-card .caption-image-card  span {
+  font-weight: 400;
+  font-family: "Montserrat", "Open Sans", Arial, sans-serif;
+  padding: 0px 10px;
+
+  padding: 0px 10px;
+  display: inline-block;
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1;
+}
+
+/* Yellow */
+.image-card.yellow .caption-image-card {
+	background-color: #ffff5a;
+	color: #111;
+}
+
+
+.image-card.none .caption-image-card {
+	background-color: transparent;
+	color: #111;
+}
