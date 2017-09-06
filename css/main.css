@@ -1127,7 +1127,8 @@ Product Page:
 }
 
 #getTheLook_imageCards2 .image-card--style-2 {
-    margin: 0.5em 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 #getTheLook_imageCards2 .col-text-section {

@@ -568,6 +568,9 @@ Components: Image Card
 	width: 250px;
 	height: 250px;
 	overflow: hidden;
+
+	margin-left : auto;
+	margin-right: auto;
 }
 
 .image-card--style-2 .image-card-img {
@@ -627,5 +630,8 @@ Components: Image Card
 	.image-card--style-2 {
 		width: 200px;
 		height: 200px;
+
+		margin-left : 0;
+		margin-right: 0;
 	}
 }
