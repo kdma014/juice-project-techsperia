@@ -1051,6 +1051,32 @@ Product Page:
 * Get The Look Page
 ----------------------------*/
 
+/*
+*  Get the Look - Header Section
+*/
+
+.look-page-header {
+
+}
+
+/* FadeIn effect for photos */
+.look-page-header .image-card {
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.look-page-header .image-card:nth-child(2) {
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.look-page-header .image-card:nth-child(3) {
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
 
 /*
 * Image Cards Section 1 
@@ -1069,6 +1095,13 @@ Product Page:
 }
 
 
+/* FadeIn effect for portraits */
+#getTheLook_imageCards1 .image-card-col:nth-child(1) .image-card,
+#getTheLook_imageCards1 .image-card-col:nth-child(4) .image-card {
+    animation-delay: .1s;
+}
+
+
 /*
 * Image Cards Section 3 
 */
@@ -1077,7 +1110,11 @@ Product Page:
     background-color: #fbfbfb;
 }
 
-
+/* FadeIn effect for portraits */
+#getTheLook_imageCards3 .image-card-col:nth-child(1) .image-card,
+#getTheLook_imageCards3 .image-card-col:nth-child(4) .image-card {
+    animation-delay: .2s;
+}
 
 /*
 * Image Cards section 2
