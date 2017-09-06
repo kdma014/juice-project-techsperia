@@ -73,13 +73,14 @@
 
 <main class="main-section page-main-area" id="get_the_look_page">
 
+     <!-- GET THE LOOK Header -->
      <header class="section-header look-page-header" style="background-color: #ffff5a; position: relative; padding: 0;">
 
          <div class="container" style="position: relative; padding-bottom: 1em; padding-top: 3em;">
 
              <!-- decoration -->
-             <div id="decor_xG1" class="decorate dots" style="position: absolute; right: 20px; bottom: -25px;user-select: none;-webkit-user-drag: none; ">
-                     <img src="img/decorations/dots-vertical_120px.png" width="120">
+             <div id="decor_xG1" class="decorate dots" style="position: absolute; right: 20px; bottom: -16.5px; z-index:1; user-select: none;-webkit-user-drag: none; ">
+                     <img src="img/decorations/dots-horizontal_120px.png" width="84">
              </div>
              <!-- decoration end -->
 
@@ -136,14 +137,10 @@
          </div>
      </header>
 
-
-
-
      <!-- Image Cards Row Section 1 -->
      <section class="section-main image-cards-container" id="getTheLook_imageCards1" >
          <div class="container">
              <div class="row image-cards-row">
-                
                 <div class="col-md-3  col-sm-6 col-xs-12">
                   <div class="image-card yellow yellow text-center">
                     <div class="inner-container">
@@ -181,24 +178,29 @@
                     </div>    
                   </div>
                 </div>
-
              </div> 
          </div> 
+
+         <!-- decoration -->
+         <div id="decor_xG3" class="decorate dots visible-md visible-lg" style="position: absolute; z-index:1; top:50%; right: -10px; margin-top: -42px; user-select: none;-webkit-user-drag: none; ">
+                 <img src="img/decorations/swirl_50px.png" width="35">
+         </div>
+         <!-- decoration end -->
      </section>
 
      <!-- Image Cards Row Section 2 -->
      <section class="section-main image-cards-container" id="getTheLook_imageCards2">
 
-
+         <div class="faux-bg visible-md visible-lg" style="position: absolute;top: 0;bottom: 0;left: 0;width: 30%;background: #000;"></div>
          <div class="container" style="position: relative;">
              <!-- decoration -->
-             <div id="decor_xG2" class="decorate dots visible-md visible-lg" style="position: absolute; top:50%; right: -20px; margin-top: -60px; user-select: none;-webkit-user-drag: none; ">
-                     <img src="img/decorations/dots_50px.png" width="50">
+             <div id="decor_xG3" class="decorate dots visible-md visible-lg" style="position: absolute; z-index:1; top:50%; right: -10px; margin-top: -42px; user-select: none;-webkit-user-drag: none; ">
+                     <img src="img/decorations/dots_50px.png" width="35">
              </div>
              <!-- decoration end -->
 
              <div class="row image-cards-row">
-                 <div class="col-md-4 col-xs-12 col-sm-12">
+                 <div class="col-md-4 col-xs-12 col-sm-12" id="imgCards2_text_col">
                    <div class="inner">
                      <div class="col-text-section" >
                        <h4>Here is a title, yes</h4>
