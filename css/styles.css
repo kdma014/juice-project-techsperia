@@ -625,8 +625,12 @@ Components: Image Card
 	max-width: 70%;
 }
 
-/* screens width > sm */
+
 @media (min-width: 768px) { 
+
+}
+
+@media (min-width: 970px) { 
 	.image-card--style-2 {
 		width: 200px;
 		height: 200px;
