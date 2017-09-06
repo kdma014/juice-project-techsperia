@@ -1047,6 +1047,33 @@ Product Page:
 
 
 
+/*---------------------------
+* Get The Look Page
+----------------------------*/
+
+
+#getTheLook_imageCards2 .image-card--style-2 {
+    margin: 0.5em auto;
+}
+
+#getTheLook_imageCards2 .col-text-section {
+    width: 280px;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+
+@media (min-width: 970px) {
+    #getTheLook_imageCards2 .col-text-section {
+        margin: 0.5em 0;
+        width: 200px;
+        text-align: left;
+
+    }
+}
+
+
+
 /*-----------------------------------
 Components: Product List on Grid
 ------------------------------------*/
