@@ -521,7 +521,7 @@ Components: Image Card
 .image-card  .inner-container {
 	display: inline-block;
 	max-width: 220px;
-	min-width: 220px;
+	min-width: 150px;
 }
 
 .image-card .caption-image-card {

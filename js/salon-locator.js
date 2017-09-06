@@ -53,8 +53,13 @@ function initMap() {
     _contentString += "<div class='infowindow-content'>";
     _contentString += "<h3 class='marker-name'>" + this_place.name + "</h3>";
     _contentString += "<p class='addressline'>"+  this_place.address +"</p>";
-    _contentString += "<ul class='contact-inf-list' style='list-style-type: none; padding: 0;'><li style='display: inline-block; margin-right: 5px;'><i class='fa fa-phone fa-fw'></i> <span>"+  this_place.contact.split(",")[0] +"</span></li><li style='display: inline-block; margin-right: 5px;'><i class='fa fa-envelope fa-fw'></i> <span>"+  this_place.contact.split(",")[1] +"</span></li></ul>";
-    _contentString += "<a href='"+ this_place.mapsUrl +"' class='view-on-maps'>View on maps</a>"
+
+    if ( this_place.contact.length > 0 ) {
+      _contentString += "<ul class='contact-inf-list' style='list-style-type: none; padding: 0;'><li style='display: inline-block; margin-right: 5px;'><i class='fa fa-phone fa-fw'></i> <span>"+  this_place.contact.split(",")[0] +"</span></li><li style='display: inline-block; margin-right: 5px;'><i class='fa fa-envelope fa-fw'></i> <span>"+  this_place.contact.split(",")[1] +"</span></li></ul>";
+    }
+    if ( this_place.mapsUrl.length > 0 ) {
+        _contentString += "<a href='"+ this_place.mapsUrl +"' class='view-on-maps'>View on maps</a>";
+    }
     _contentString += "</div>";
         
         
