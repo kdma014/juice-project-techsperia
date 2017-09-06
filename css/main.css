@@ -331,10 +331,12 @@ HEADER AND MAIN NAV
 
 
 .main-section .section-header {
+    position: relative;
     padding: 4em 0;
 }
 
 .main-section .section-main {
+    position: relative;
     padding: 4em 0;
 }
 
