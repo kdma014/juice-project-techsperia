@@ -526,7 +526,7 @@ Components: Image Card
 
 .image-card .caption-image-card {
   position: relative;
-  margin: 0 10px;
+  margin: 0 0;
   padding: 1em 0.5em;
 
   font-size: 0.9em;  
@@ -558,4 +558,59 @@ Components: Image Card
 .image-card.none .caption-image-card {
 	background-color: transparent;
 	color: #111;
+}
+
+
+
+/* Style 2 */
+.image-card--style-2 {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+}
+
+.image-card--style-2 .hover-text-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	background-color: rgba(255, 255, 90, 0.73);
+	color: #111;
+	font-weight: 600;
+	font-family: "Montserrat";
+
+	opacity: 0;
+	-webkit-transform: rotateY(90deg) scale(0);
+	-moz-transform: rotateY(90deg) scale(0);
+	transform: rotateY(90deg) scale(0);
+
+	-webkit-transition: 0.2s all ease-in-out;
+	-moz-transition: 0.2s all ease-in-out;
+	transition: 0.2s all ease-in-out;
+}
+
+.image-card--style-2:hover,
+.image-card--style-2:focus {
+	/*box-shadow: 2px 2px 0 #fff, 5px 5px 0 #000;*/
+	outline: none;
+}
+
+.image-card--style-2:hover .hover-text-content,
+.image-card--style-2:focus .hover-text-content {
+	-webkit-transform: rotateY(0deg) scale(1);
+	-moz-transform: rotateY(0deg) scale(1);
+	transform: rotateY(0deg) scale(1);
+	opacity: 1;
+}
+
+.image-card--style-2 .hover-text-content p {
+	position: absolute;
+	max-width: 70%;
 }
