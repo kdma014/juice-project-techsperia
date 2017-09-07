@@ -58,7 +58,7 @@ $( document ).ready(function(){
 
 
 	/****************************************
-	jQuery Script for `Services` page
+	jQuery Script for `Product` page
 	*****************************************/
 	/* Filter and Cart options
 	 * Close / Open and Effects
@@ -95,6 +95,29 @@ $( document ).ready(function(){
 
 	  e.preventDefault();
 	});
+
+
+	/*
+	* Slides on the Product page
+	*/
+
+	var product_carousel_1 = $('#products_Slide_1').owlCarousel({
+    items:5,
+    loop:true,
+    margin:10,
+    merge:true,
+    responsive:{
+        678:{
+            mergeFit:true
+        },
+        1000:{
+            mergeFit:false
+        }
+    }
+    });
+
+
+
 
 
 });
