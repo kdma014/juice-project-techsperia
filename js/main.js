@@ -25,6 +25,7 @@ $( document ).ready(function(){
 	    margin: 0,
 	    nav:false,
 	    dots:false, 
+	    items: 3,
 	    responsive:{
 	        0:{
 	            items:1
