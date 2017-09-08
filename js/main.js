@@ -13,6 +13,50 @@ $( document ).ready(function(){
 
 
 	/****************************************
+	jQuery Script for Home page
+	*****************************************/
+
+	/*
+	* Instagram Testimonials Slide
+	*/
+
+	var igCarousel = $('.ig-feed-boxes').owlCarousel({
+	    loop:true,
+	    margin: 0,
+	    nav:false,
+	    dots:false, 
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+
+	        600:{
+	            items:3
+	        },
+
+	        1000:{
+	            items:3
+	        }
+	    }
+	});
+
+	$(".ig-slide-nav").on("click", function(e){
+
+		var navDirection = $(this).attr('data-slide');
+		if ( navDirection == "next" ) {
+			igCarousel.trigger('next.owl.carousel');
+		}
+		else if ( navDirection == "prev" ) {
+			igCarousel.trigger('prev.owl.carousel');
+		}
+		else {
+			console.error("No data-slide value on the given anchor element");
+		}
+
+		e.preventDefault();
+	});
+
+	/****************************************
 	jQuery Script for `Services` page
 	*****************************************/
 	// Service List Expand Window

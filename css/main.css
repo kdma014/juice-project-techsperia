@@ -408,7 +408,8 @@ HEADER AND MAIN NAV
 }
 
 .instagram-feed-box .inner {
-    max-width: 80%;
+    position: relative;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -431,6 +432,69 @@ HEADER AND MAIN NAV
 .instagram-feed .ig-feed-header .links-btn {
     box-shadow: 9px 8px 0 #ffff5a;
     padding: 0.75em 1.5em;
+}
+
+
+
+.instagram-feed-carousel {
+    position: relative;
+    margin: 4em auto;
+}
+
+.ig-feed-boxes {
+    position: relative;
+    margin: 0 auto;
+    max-width: 860px; /* 232 + 20 * 3 */
+}
+
+
+
+
+.ig-box {
+  max-width: 232px;
+  width: 232px;
+  text-align: left;
+}
+
+.owl-carousel .owl-item.ig-box {
+    float: none;
+    margin: 0 auto;
+}
+
+.ig-box .photo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+
+}
+
+.ig-box .ig-handle {
+  font-size: 1rem;
+  color: #5c88e9;
+  text-decoration: none;
+
+  transition: 0.1s all ease-in-out;
+}
+
+.ig-box .ig-handle:hover,
+.ig-box .ig-handle:active,
+.ig-box .ig-handle:focus {
+  color: #5c88e9;
+  text-decoration: none;
+}
+
+.ig-box .ig-caption {
+  color: #666;
+  font-size: 1em;
+}
+
+.ig-box .ig-caption a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.ig-box .ig-caption a:hover {
+  color:#111;
 }
 
 

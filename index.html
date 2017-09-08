@@ -225,18 +225,57 @@
 
 
             <div class="instagram-feed-carousel">
-                <div class="ig-feed-boxes">
-                    <article class="ig-box">
-                        <img src="img/stocks/person-1.jpg">
-                        <p><a href="#">@some_user</a></p>
-                        <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
+                <div class="ig-feed-boxes owl-carousel owl-theme">
+                    <article class="ig-box owl-item">
+                        <img class="photo" src="images/customers/ig-customer-1.jpg" width="232">
+                        <a class="ig-handle" href="#">@jane_doe</a>
+                        <p class="ig-caption">Lovin' this cut <a href="https://www.instagram.com/explore/tags/thanksjuice/" class="hashtag">#thanksjuice</a> <a href="#" class="hashtag">#other</a></p>
                     </article>
 
-                    <article class="ig-box">
-                        <img src="img/stocks/person-2.jpg">
-                        <p><a href="#">@some_user</a></p>
-                        <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
+                    <article class="ig-box owl-item">
+                        <img class="photo" src="images/customers/ig-customer-2.jpg" width="232">
+                        <a class="ig-handle" href="#">@jonnadoe</a>
+                        <p class="ig-caption">Hair game on point.</p>
                     </article>
+
+                    <article class="ig-box owl-item">
+                        <img class="photo" src="images/customers/ig-customer-3.jpg" width="232">
+                        <a class="ig-handle" href="#user">@cheryl_doe</a>
+                        <p class="ig-caption">Getting the perfect make-over for my wedding. <a href="https://www.instagram.com/explore/tags/juicetorescue/" class="hashtag">#juicetorescue</a></p>
+                    </article>
+
+                    <article class="ig-box owl-item">
+                        <img class="photo" src="images/customers/ig-customer-4.jpg" width="232">
+                        <a class="ig-handle" href="#user">@janejanexx</a>
+                        <p class="ig-caption">Lorem Ipsum Doler Sit Amet <a href="https://www.instagram.com/explore/tags/juicetorescue/" class="hashtag">#juicetorescue</a></p>
+                    </article>
+
+                    <article class="ig-box owl-item">
+                        <img class="photo" src="images/customers/ig-customer-5.jpg" width="232">
+                        <a class="ig-handle" href="#user">@_lysa</a>
+                        <p class="ig-caption">Integer ex lacus, lobortis quis consequat in. </p>
+                    </article>
+
+                    <article class="ig-box owl-item">
+                        <img class="photo" src="images/customers/ig-customer-2.jpg" width="232">
+                        <a class="ig-handle" href="#user">@somename</a>
+                        <p class="ig-caption">Suspendisse potenti. Donec lorem metus, blandit sit amet sagittis in, semper ac neque.  <a href="https://www.instagram.com/explore/tags/juicesalon/" class="hashtag">#juicesalon</a></p>
+                    </article>
+
+                </div>
+
+                <div class="slider-navigation">
+                    <div class="icon-container">
+                        <a href="#" class="ig-slide-nav" data-slide="prev">
+                           <img style="transform: rotateY(180deg);" src="img/icons/next_dark.svg" width="64"> 
+                        </a>
+                    </div>
+
+                    <div class="icon-container">
+                        <a href="#" class="ig-slide-nav" data-slide="next">
+                           <img src="img/icons/next_dark.svg" width="64"> 
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -253,7 +292,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700|Oxygen:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.min.css">  
     <link rel="stylesheet" href="css/font-awesome.min.css">
+
     <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
 
     <!-- Scripts and Resources -->
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
