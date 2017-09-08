@@ -104,14 +104,15 @@ Theme
 /* Button Links */
 .links-btn {
 	display: inline-block;
-	padding: 0.7em 1.5em;
-	margin: 0.5em 0;
+	padding: 0.5em 1.25em;
+	margin: 0.5em 0.5em;
 	
 	border: 1px solid #333;
 	background-color: #fff;
-	color: #333;
-	font-size: 1em;
-	font-weight: 400;
+	color: #111;
+	font-family: "Montserrat";
+	font-size: 0.95em;
+	font-weight: 600;
 	text-decoration: none;
 }
 
