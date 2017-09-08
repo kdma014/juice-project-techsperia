@@ -375,6 +375,64 @@ HEADER AND MAIN NAV
 
 }
 
+/*---------------------------
+* Home Page
+*---------------------------/
+
+
+
+
+/*
+* Instagram Feed Section
+*/
+
+.instagram-feed {
+  position: relative;
+  padding: 4em 0;
+  background-color: #fafaf2;
+}
+
+.instagram-feed .instagram-feed-container { 
+  position: relative;
+}
+
+
+.instagram-feed-box {
+  position: relative;
+  padding: 2em 0;
+  margin: 2em 0;
+
+  background-color: #fff;
+  border: 2px solid #111;
+  box-shadow: 8px 8px 0 #fff, 8px 8px 0 2px #000;
+}
+
+.instagram-feed-box .inner {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+.instagram-feed-box .ig-feed-header {
+}
+
+.instagram-feed-box .ig-feed-header .ig-box-title {
+    display: flex;
+    align-items: center;
+
+    font-size: 1.15em;
+}
+
+.instagram-feed-box .ig-feed-header .ig-box-title .fa,
+.instagram-feed-box .ig-feed-header .ig-box-title span {
+    vertical-align: middle;
+}
+
+.instagram-feed .ig-feed-header .links-btn {
+    box-shadow: 9px 8px 0 #ffff5a;
+    padding: 0.75em 1.5em;
+}
+
 
 /*---------------------------
 * Services Page

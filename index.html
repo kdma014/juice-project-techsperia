@@ -73,42 +73,26 @@
 <!-- 
 @ Main Page Carousel 
 -->
-<aside id="sliderMain" class="main-slider">
+<header id="sliderMain" class="main-slider">
     <div class="slider--content container-fluid">
         
         <div class="slides">
             
             <div class="slide">
-                <div class="bg-image"></div>
-                <div class="text-box">
-                    <h3>Lorem Ipsum Doler Sit Amet</h3>
-                    <p>Sed non dapibus mauris. Donec efficitur est nec risus varius iaculis. Proin sapien orci</p>
-                    <a href="#" class="action-link">Read story</a>
-                </div>
+
             </div>
 
             <div class="slide">
-                <div class="bg-image"></div>
-                <div class="text-box">
-                    <h3>Lorem Ipsum Doler Sit Amet</h3>
-                    <p>Sed non dapibus mauris. Donec efficitur est nec risus varius iaculis. Proin sapien orci</p>
-                    <a href="#" class="action-link">Read story</a>
-                </div>
+
             </div>
 
             <div class="slide">
-                <div class="bg-image"></div>
-                <div class="text-box">
-                    <h3>Lorem Ipsum Doler Sit Amet</h3>
-                    <p>Sed non dapibus mauris. Donec efficitur est nec risus varius iaculis. Proin sapien orci</p>
-                    <a href="#" class="action-link">Read story</a>
-                </div>
-            </div>
 
+            </div>
         </div>
 
     </div>
-</aside>
+</header>
 
 
 <!-- 
@@ -137,11 +121,12 @@
  -->
 <main class="main-section page-main-area" id="home_page_content">
 
-
+  <!-- Section 1 : Images cards and text -->
+  <section class="cardss"></section>
 
 
   <!-- Get the Look - Top Picks -->
-  <section class="section-header look-page-header" style="background-color: #ffff5a; position: relative; padding: 0;">
+  <section class="section-main look-page-section" style="background-color: #ffff5a; position: relative; padding: 0;">
 
       <div class="container" style="position: relative; padding-bottom: 1em; padding-top: 3em;">
           <!-- decoration -->
@@ -173,23 +158,25 @@
               </div>
             </div>
 
+            <div class="col-md-1 col-lg-1 visible-md visible-lg"></div>
+
             <div class="col-md-7 col-xs-12">
               <div class="row">
-                <div class="animated fadeIn image-card none col-md-4 col-xs-6 text-center">
+                <div class="animated zoomIn image-card none col-md-4 col-xs-6 text-center">
                   <div class="inner-container">
                     <img style="margin: 0 auto;" src="images/get-the-look/look-1-is.png" width="150" height="180" class="img-responsive">
                     <p class="caption-image-card text-left" style="max-width: 165px; margin: 0 auto;">This hairstyle that</p>
                   </div>  
                 </div>
 
-                <div class="animated fadeIn image-card none col-md-4 col-xs-6 text-center">
+                <div class="animated zoomIn image-card none col-md-4 col-xs-6 text-center">
                   <div class="inner-container">
                     <img style="margin: 0 auto;" src="images/get-the-look/look-2-is.png" width="150" height="180" class="img-responsive">
                     <p class="caption-image-card text-left" style="max-width: 165px; margin: 0 auto;">This hairstyle that</p>
                   </div>  
                 </div>
 
-                <div class="animated fadeIn image-card none col-md-4 col-xs-12 text-center">
+                <div class="animated zoomIn image-card none col-md-4 col-xs-12 text-center">
                   <div class="inner-container">
                     <img style="margin: 0 auto;" src="images/get-the-look/look-3-is.png" width="150" height="180" class="img-responsive">
                     <p class="caption-image-card text-left" style="max-width: 165px; margin: 0 auto;">This hairstyle that</p>
@@ -198,8 +185,6 @@
 
               </div>
             </div>
-
-            <div class="col-md-1 visible-md"></div>
 
           </div>
       </div>
@@ -212,66 +197,54 @@
 <!--
 @ Instagram Slide Section
 -->
-<aside class="content-section instagram-feed">
+<section class="content-section instagram-feed" id="instagramFeed">
+    <div class="instagram-feed-container container" style="position: relative;">
 
-    <div class="instagram-feed-container container">
-        <header class="ig-feed-header">
-            <div class="row">
-                <div class="col-md-8 col-xs-12">
-                    <h3 class="ig-box-title">
-                        <i class="fa fa-instagram fa-fw fa-2x"></i>
-                        <span>Find out what our happy customers have to say :)</span>
-                    </h3>
-                </div>
-                <div class="col-md-4 col-xs-12">
-                    <a href="#post-your-pic" class="links-btn btn-shadow__yellow pull-right">Post your pic</a>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </header>
-
-        <div class="instagram-feed-carousel">
-            <div class="ig-feed-boxes">
-            
-                <article class="ig-box">
-                    <img src="img/stocks/person-1.jpg">
-                    <p><a href="#">@some_user</a></p>
-                    <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
-                </article>
-
-                <article class="ig-box">
-                    <img src="img/stocks/person-2.jpg">
-                    <p><a href="#">@some_user</a></p>
-                    <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
-                </article>
-
-                <article class="ig-box">
-                    <img src="img/stocks/person-3.jpg">
-                    <p><a href="#">@some_user</a></p>
-                    <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
-                </article>
-
-                <article class="ig-box">
-                    <img src="img/stocks/person-4.jpg">
-                    <p><a href="#">@some_user</a></p>
-                    <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
-                </article>
-
-                <article class="ig-box">
-                    <img src="img/stocks/person-5.jpg">
-                    <p><a href="#">@some_user</a></p>
-                    <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
-                </article>
-
-                <article class="ig-box">
-                    <img src="img/stocks/person-6.jpg">
-                    <p><a href="#">@some_user</a></p>
-                    <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
-                </article>
-            </div>
+        <!-- decoration -->
+        <div id="decor_xG59" class="decorate dots" style="position: absolute; right: 20px; top: -3.5em; z-index:1; user-select: none;-webkit-user-drag: none; ">
+                <img src="img/decorations/dots-horizontal_120px.png" width="84">
         </div>
-    </div>
-</aside>
+        <!-- decoration end -->
+
+        <div class="instagram-feed-box">
+          <div class="inner">
+            <header class="ig-feed-header">
+                <div class="row">
+                    <div class="col-md-8 col-xs-12">
+                        <h4 class="ig-box-title">
+                            <i class="fa fa-instagram fa-fw fa-2x"></i>
+                            <span>Find out what our happy customers have to say :)</span>
+                        </h4>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <a href="#post-your-pic" class="links-btn btn-shadow__yellow pull-right">Post your pic</a>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </header>
+
+
+            <div class="instagram-feed-carousel">
+                <div class="ig-feed-boxes">
+                    <article class="ig-box">
+                        <img src="img/stocks/person-1.jpg">
+                        <p><a href="#">@some_user</a></p>
+                        <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
+                    </article>
+
+                    <article class="ig-box">
+                        <img src="img/stocks/person-2.jpg">
+                        <p><a href="#">@some_user</a></p>
+                        <p>Some lorem ipsume doler sit amet <a href="#" class="hashtag">#something</a> <a href="#" class="hashtag">#other</a></p>
+                    </article>
+                </div>
+            </div>
+
+          </div> <!-- .inner end -->
+        </div> <!-- .instagreem-feed-box end -->
+
+    </div>    
+</section>
 
 
 
