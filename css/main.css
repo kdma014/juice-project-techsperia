@@ -1412,6 +1412,60 @@ Franchise Page
   padding: 0.5em 0;
 }
 
+
+
+/* Enquiry Form Section */
+#section_enquiry_form {
+    background-color: #ffff5a;
+}
+
+
+.enquiry-form-box {
+  padding: 20px 0;
+  margin: 40px 20px;
+  border: 2px solid #111;
+  background-color: #fff;
+  box-shadow: 6px 6px 0 #111;
+}
+
+
+/* Form element */
+.enquiry-form-box .form-general .input-block {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+.enquiry-form-box .form-general .input-block p label {
+  margin: 0;
+  font-family: "Montserrat";
+}
+
+.enquiry-form-box .form-general .input-block input[type="text"],
+.enquiry-form-box .form-general .input-block input[type="number"],
+.enquiry-form-box .form-general .input-block input[type="email"],
+.enquiry-form-box .form-general .input-block select,
+.enquiry-form-box .form-general .input-block textarea {
+  width: 100%;
+  max-width: 280px;
+  min-width: 200px;
+  padding: 0.5em 1em;
+}
+
+.enquiry-form-box .form-general .input-block textarea {
+  font-size: 1em;
+  padding: 0.75em 1em;
+  border: 1px solid #222;
+  outline: 2px solid transparent;
+
+  -webkit-transition: 0.1s all ease-in-out;
+     -moz-transition: 0.1s all ease-in-out;
+          transition: 0.1s all ease-in-out;
+}
+ 
+.enquiry-form-box .form-general .input-block textarea:focus {
+  outline: 3px solid #222;
+}
+
+
 /*-----------------------------------
 Components: Product List on Grid
 ------------------------------------*/
