@@ -270,7 +270,8 @@ Bootstrap Navigation Theme
 .form-general input[type="text"], 
 .form-general input[type="email"], 
 .form-general input[type="password"], 
-.form-general input[type="number"] {
+.form-general input[type="number"],
+.form-general input[type="tel"]{
   font-size: 1em;
   padding: 0.75em 1em;
   border: 1px solid #222;
@@ -284,7 +285,8 @@ Bootstrap Navigation Theme
 .form-general input[type="text"]:focus, 
 .form-general input[type="email"]:focus, 
 .form-general input[type="password"]:focus, 
-.form-general input[type="number"]:focus {
+.form-general input[type="number"]:focus ,
+.form-general input[type="tel"]:focus {
   outline: 3px solid #111;
 }
 

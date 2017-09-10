@@ -1442,6 +1442,7 @@ Franchise Page
 .enquiry-form-box .form-general .input-block input[type="text"],
 .enquiry-form-box .form-general .input-block input[type="number"],
 .enquiry-form-box .form-general .input-block input[type="email"],
+.enquiry-form-box .form-general .input-block input[type="tel"],
 .enquiry-form-box .form-general .input-block select,
 .enquiry-form-box .form-general .input-block textarea {
   width: 100%;
@@ -1464,6 +1465,11 @@ Franchise Page
 .enquiry-form-box .form-general .input-block textarea:focus {
   outline: 3px solid #222;
 }
+
+.enquiry-form-box .form-general .input-block p .form-hint {
+    font-size: 0.9em;
+    color: #666;
+} 
 
 
 /*-----------------------------------
