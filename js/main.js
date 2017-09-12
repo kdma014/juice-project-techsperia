@@ -207,6 +207,50 @@ $( document ).ready(function(){
 	*/
 
 
+	/****************************************
+	jQuery Script for `Academy` page
+	*****************************************/
+
+	/* 
+	 * Cart Button on the Academy page  
+	 */
+
+	$("#action_btns_stripe .action-btn .options-btn").on("click", function(e){
+	  
+	  // Find the target by using `this`'s data-target attribute
+	  var target_elm = $(this).data("target");
+	  
+	  // Show or hide the target element
+	  console.log( target_elm );
+	  
+	  $( target_elm ).addClass( "active" ).fadeIn( 100 ).focus();
+	  
+	  // Lose focus
+	  $(this).blur();
+	  
+	  // Add event handler to the BG-overlay
+	  $(".bg-overlay").one("click", function(){
+	    $( target_elm ).fadeOut( 100 );
+	    $( target_elm ).removeClass( "active" );
+	  });
+
+	  e.preventDefault();
+	  
+	});
+	
+	$("#action_btns_stripe .action-btn .close-btn a").on("click", function(e){
+		
+	  // Find the target by using `this`'s data-target attribute
+	  var target_elm = $(this).data("target");
+	  
+	  // Show or hide the target element
+	  $( target_elm ).fadeOut( 100 );
+
+	  e.preventDefault();
+	});
+
+
+
 
 
 });

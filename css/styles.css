@@ -189,8 +189,8 @@ Theme
 
 .links-btn.btn-inverted {
 	color: #fff;
-	background-color: #333;
-	border-color: #fff;
+	background-color: #111;
+	border-color: #111;
 }
 
 .links-btn.btn-inverted:hover {
@@ -733,6 +733,175 @@ Components: Image Card
 	position: absolute;
 	max-width: 70%;
 }
+
+
+/*
+* SECTION LIST
+* Service / Academy Page Buttons and Info window styles
+*/
+
+
+.section-list .list-col {
+    position: static;
+    text-align: center;
+}
+
+.section-list .list-col .list-item {
+    position: relative;
+    display: block;
+
+    padding: 10px 15px;
+    margin: 20px 15px;
+
+    font-family: "Montserrat", "Oxygen", "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-decoration: none;
+
+    border: 2px solid #111;
+    box-shadow: 4px 4px 0 #ffff5a;
+
+    /* Vertically align inner content */
+    max-width: 100%;
+    height: 42px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    line-height: 1;
+
+    -webkit-transition: 0.1s all ease-in-out;
+    -moz-transition: 0.1s all ease-in-out;
+    transition: 0.1s all ease-in-out;
+}
+
+.section-list .list-col .list-item:hover,
+.section-list .list-col .list-item:focus {
+    box-shadow: 2px 2px 0 #222;
+}
+
+
+
+/*  Info Box (Appears on top ) */
+.infowindow {
+    display: none;
+    position: absolute;
+    top: 0;left: 0;right: 0; 
+    background: #fff;
+    z-index: 2;
+    border: 2px solid #222;
+    box-shadow: 5px 4px yellow, 5px 4px 0 2px #222;
+
+    margin: 0px 15px;
+    margin-bottom: 20px;
+}
+
+.infowindow.active {
+    display: block;
+}
+
+
+.infowindow > .inner {
+    margin: 0 auto;
+    max-width: 90%;
+    text-align: left;
+}
+
+.infowindow h3 {
+    padding: 0.5em 1em;
+    font-size: 1.25em;
+    font-weight: 600;
+    border-bottom: 2px solid #eee;
+}
+
+.infowindow h3 .close-infowindow {
+    float: right;
+    color: #ccc;
+}
+
+.infowindow h3 .close-infowindow:hover {
+    color: #333;
+}
+
+
+.infowindow .item-block {
+    position: relative;
+}
+
+.infowindow .item-block .inner {
+    position: relative;
+    max-width: 80%;
+    min-height: 160px;
+    margin: 10px 20px;
+    margin-bottom: 60px;
+    padding: 20px;
+    background-color: #ffff6c;
+}
+
+.infowindow .item-block.white .inner {
+    background-color: #fff; 
+}
+
+.infowindow .item-block.pink .inner {
+    background-color: #fff; 
+}
+
+.infowindow .item-block h4 {
+    font-weight: 600;
+    font-size: 1.15em;
+}
+
+.infowindow .item-block .price {
+    display: inline-block;
+    background-color: #111;
+    color: #fff;
+    padding: 10px 20px;
+
+    position: absolute;
+    bottom: -20px;
+    right: 14px;
+}
+
+
+
+
+.infowindow .item-add-button {
+	position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+}
+.infowindow .item-add-button a {
+	display: block;
+	padding: 10px 20px;
+	font-weight: 500;
+	text-align: center;
+}
+
+.infowindow .item-add-button a:hover {
+	color: #fff;
+	background-color: #222;
+}
+
+
+@media (min-width: 768px) { 
+    .infowindow .item-add-button {
+	    position: absolute;
+        bottom: -30px;
+        right: 14px;
+        left: initial;
+    }
+
+    .infowindow .item-add-button a {
+	    padding: 10px 20px;
+	    font-weight: 500;
+
+	    min-width: 150px;
+	    text-align: center;
+    }
+}
+
+
+
 
 
 @media (min-width: 768px) { 

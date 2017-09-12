@@ -519,6 +519,114 @@ HEADER AND MAIN NAV
     max-width: 100%;
 }
 
+/*---------------------------
+* Academy Page
+----------------------------*/
+#academy_page .service-page-header {
+    background-color: #111;
+    color: #fff;
+}
+
+#academy_page .academy-list .academy-title-box {
+    text-align: center;
+}
+
+#academy_page .academy-list .academy-title-box h2 {
+    display: inline-block;
+    margin: 0;
+    padding: 30px 40px;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1em;
+    font-size: 1rem;
+    background-color: #111;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* Flexbox header title to support buttons on the left and right corners */
+.academy-title-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.academy-title-box .header-col {
+}
+
+/* Academy page - action button stripe */
+#action_btns_stripe {
+    margin-bottom: 2em;
+}
+#action_btns_stripe .action-btn {
+    width: 100%;
+}
+
+
+#action_btns_stripe .options-btn {
+  position: relative;
+  display: block;
+  border-radius: 5px;
+  font-weight: 500;
+  text-align: left;
+  margin: 1em auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  transition: 0.1s all ease-in-out;
+  text-align: center;
+  width: 100%;
+}
+
+#action_btns_stripe .options-btn::after {
+  content: attr(data-label); 
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  opacity: 0.9;
+  text-align: center;
+  display: inline-block;
+}
+
+
+#goScreen1 {
+    margin: 1em 0;
+    display: inline-block;
+}
+
+
+@media (min-width: 768px) {
+
+
+    #action_btns_stripe {
+        margin-top: -70px;
+    }
+
+    #action_btns_stripe .action-btn {
+        width: initial;
+    }
+    #action_btns_stripe .action-btn.pull-right,
+    #action_btns_stripe .action-btn.pull-left {
+        float: inherit;
+    }
+
+    #action_btns_stripe .options-btn {
+        width: 110px;
+    }
+
+
+
+    #action_btns_stripe #checkout_popup {
+        left: -0px;
+        right: 0;
+        max-width: 360px;
+        min-width: 220px;
+
+    }
+
+}
+
 
 /*---------------------------
 * Services Page
@@ -536,7 +644,7 @@ HEADER AND MAIN NAV
 #services_page .services-list .services-title-box h2 {
     display: inline-block;
     margin: 0;
-    padding: 20px 40px;
+    padding: 30px 40px;
     font-weight: 400;
     font-size: 16px;
     font-size: 1em;
@@ -549,6 +657,7 @@ HEADER AND MAIN NAV
 .services-list .row {
     position: relative;
 }
+
 
 .services-list .services-list-col {
     position: static;
