@@ -41,8 +41,8 @@ $( document ).ready(function(){
 	    }
 	});
 
-	$(".ig-slide-nav").on("click", function(e){
 
+	$(".ig-slide-nav").on("click", function(e){
 		var navDirection = $(this).attr('data-slide');
 		if ( navDirection == "next" ) {
 			igCarousel.trigger('next.owl.carousel');
@@ -56,6 +56,30 @@ $( document ).ready(function(){
 
 		e.preventDefault();
 	});
+
+
+	igCarousel.on("changed.owl.carousel", function(e){
+		console.log( e );
+		var $animatingElems = $(e.relatedTarget.$element).find("[data-animation ^= 'animated']");
+		doAnimations( $animatingElems );
+	});
+
+
+	// Slider Animation
+	function doAnimations( elems ) {
+		//Cache the animationend event in a variable
+		var animEndEv = 'webkitAnimationEnd animationend';
+		
+		elems.each(function () {
+			var $this = $(this),
+				$animationType = $this.attr('data-animation');
+
+			$this.addClass($animationType).one(animEndEv, function () {
+				$this.removeClass($animationType);
+			});
+		});
+	}
+		
 
 	/****************************************
 	jQuery Script for `Services` page
@@ -105,6 +129,42 @@ $( document ).ready(function(){
 	/****************************************
 	jQuery Script for `Product` page
 	*****************************************/
+	/*
+	* Header Carousel
+	*/
+
+
+	var productsCarousel = $("#products_slide_1").owlCarousel({
+	    loop:true,
+	    margin: 60,
+	    nav:true,
+	    dots:false, 
+	    items: 1,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+
+	        600:{
+	            items:1
+	        },
+
+	        1000:{
+	            items:1
+	        }
+	    }
+	});
+
+
+	productsCarousel.on("changed.owl.carousel", function(e){
+		console.log( e );
+		var $animatingElems = $(e.relatedTarget.$element).find("[data-animation ^= 'animated']");
+		doAnimations( $animatingElems );
+	});
+
+
+	
+
 	/* Filter and Cart options
 	 * Close / Open and Effects
 	 */
@@ -145,22 +205,6 @@ $( document ).ready(function(){
 	/*
 	* Slides on the Product page
 	*/
-
-	var product_carousel_1 = $('#products_Slide_1').owlCarousel({
-    items:5,
-    loop:true,
-    margin:10,
-    merge:true,
-    responsive:{
-        678:{
-            mergeFit:true
-        },
-        1000:{
-            mergeFit:false
-        }
-    }
-    });
-
 
 
 
