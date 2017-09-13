@@ -768,7 +768,8 @@ HEADER AND MAIN NAV
     font-size: 1.15em;
 }
 
-.service-infowindow .services-item-block .price {
+.service-infowindow .services-item-block .price,
+.service-infowindow .services-item-block .detail-box {
     display: inline-block;
     background-color: #111;
     color: #fff;
@@ -1579,6 +1580,11 @@ Franchise Page
     font-size: 0.9em;
     color: #666;
 } 
+
+/*-----------------------------------
+Components: Cart Inner
+------------------------------------*/
+
 
 
 /*-----------------------------------

@@ -110,7 +110,7 @@ $( document ).ready(function(){
 		e.preventDefault();
 	});
 
-	$( '.close-infowindow ' ).on('click', function(e){
+	$( '.services-list .close-infowindow ' ).on('click', function(e){
 
 		window.setTimeout(function(){
 			$( _currentInfoWindow ).removeClass("active");
@@ -250,6 +250,43 @@ $( document ).ready(function(){
 	});
 
 
+
+
+
+	/* InfoWindow Open / Close Controller */
+	//  List Expand Window
+	var _infoWindowLinks = $(".infowindow-btn");
+	var _currentInfoWindow_;
+
+
+	$( _infoWindowLinks ).on('click', function(e){
+		var target_infoWindow = $(this).attr("data-target");
+		_currentInfoWindow_ = target_infoWindow;
+		$( _infoWindowLinks ).animate({ opacity: 0 });
+
+		window.setTimeout(function(){
+			$( target_infoWindow ).removeAttr("hidden");
+			$( target_infoWindow ).addClass("active");
+
+			$('html, body').animate({
+			        scrollTop: $( target_infoWindow ).offset().top - 150
+			}, 200);
+
+		}, 200);
+
+		e.preventDefault();
+	});
+
+	$( '.close-infowindow ' ).on('click', function(e){
+		window.setTimeout(function(){
+			$( _currentInfoWindow_ ).removeClass("active");
+			$( _currentInfoWindow_ ).attr("hidden", "");
+			$( _infoWindowLinks ).animate({ opacity: 1 });
+
+			_currentInfoWindow_ = undefined;
+		}, 200);
+		e.preventDefault();
+	});
 
 
 
