@@ -830,11 +830,11 @@ Components: Image Card
 .infowindow .item-block .inner {
     position: relative;
     max-width: 80%;
-    min-height: 160px;
+    min-height: 150px;
     margin: 10px 20px;
     margin-bottom: 60px;
     padding: 20px;
-    background-color: #ffff6c;
+    background-color: #ffff5a;
 }
 
 .infowindow .item-block.white .inner {
@@ -846,11 +846,14 @@ Components: Image Card
 }
 
 .infowindow .item-block h4 {
+	color: #111;
+	margin-top: 0;
     font-weight: 600;
     font-size: 1.15em;
 }
 
-.infowindow .item-block .price {
+.infowindow .item-block .price,
+.infowindow .item-block .detail-box {
     display: inline-block;
     background-color: #111;
     color: #fff;

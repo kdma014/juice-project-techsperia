@@ -260,31 +260,82 @@ $( document ).ready(function(){
 
 
 	$( _infoWindowLinks ).on('click', function(e){
+
 		var target_infoWindow = $(this).attr("data-target");
-		_currentInfoWindow_ = target_infoWindow;
-		$( _infoWindowLinks ).animate({ opacity: 0 });
 
-		window.setTimeout(function(){
-			$( target_infoWindow ).removeAttr("hidden");
-			$( target_infoWindow ).addClass("active");
+		if ( target_infoWindow ) {
+			_currentInfoWindow_ = target_infoWindow;
+			$( _infoWindowLinks ).animate({ opacity: 0 });
+			window.setTimeout(function(){
+				$( target_infoWindow ).removeAttr("hidden");
+				$( target_infoWindow ).addClass("active");
 
-			$('html, body').animate({
-			        scrollTop: $( target_infoWindow ).offset().top - 150
+				$('html, body').animate({
+				        scrollTop: $( target_infoWindow ).offset().top - 150
+				}, 200);
+
 			}, 200);
 
-		}, 200);
-
-		e.preventDefault();
+			e.preventDefault();
+		}
 	});
 
-	$( '.close-infowindow ' ).on('click', function(e){
-		window.setTimeout(function(){
+	// Taking care of sub-sectionized infowindows
+	var _sub_infoWindowLinks = $(".sub--infowindow-btn");
+	var _sub_currentInfoWindow_;
+
+	$( _sub_infoWindowLinks ).on('click', function(e){
+		var target_infoWindow = $(this).attr("data-target");
+
+		if ( target_infoWindow ) {
+
+			_sub_currentInfoWindow_ = $(target_infoWindow);
+
+
 			$( _currentInfoWindow_ ).removeClass("active");
 			$( _currentInfoWindow_ ).attr("hidden", "");
-			$( _infoWindowLinks ).animate({ opacity: 1 });
 
-			_currentInfoWindow_ = undefined;
-		}, 200);
+			window.setTimeout(function(){
+
+				$(target_infoWindow).addClass("active");
+				$(target_infoWindow).removeAttr("hidden");
+
+			}, 200);
+
+			e.preventDefault();
+		}
+
+
+	});
+
+
+
+	$( '.infowindow .close-infowindow' ).on('click', function(e){
+		var parentInfoWindow = $(this).parent().parent().parent('.infowindow');
+
+		    $( parentInfoWindow ).removeClass("active");
+		    $( parentInfoWindow ).attr("hidden", "");
+
+
+			if ( _sub_currentInfoWindow_ ) {
+
+					$( _currentInfoWindow_ ).removeAttr("hidden");
+				    $( _currentInfoWindow_ ).addClass("active");
+
+				$('html, body').animate({
+				        scrollTop: $( _currentInfoWindow_ ).offset().top - 150
+				}, 200);
+
+				_sub_currentInfoWindow_ = undefined;
+			}
+
+			else {
+
+				$( _infoWindowLinks ).animate({ opacity: 1 });
+		     	_currentInfoWindow_ = undefined;
+			}
+
+
 		e.preventDefault();
 	});
 

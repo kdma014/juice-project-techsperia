@@ -111,6 +111,60 @@
                      <h2 class="service-title">Choose from our variety of services</h2>
                  </header>
 
+               <!-- control buttons stripe -->  
+               <aside id="action_btns_stripe">  
+                   <div class="row">
+                       <div class="container">
+                           <div class="col-md-4 col-sm-12">
+                               <div class="action-btn pull-left" style="display: none;">
+                                   <a class="icon-btn" href="#screen1" id="goScreen1">
+                                       <img src="img/icons/go-back-left-arrow.svg" width="28">
+                                   </a>
+                               </div>
+                           </div>
+
+                           <div class="col-md-4 col-sm-12"></div>
+
+                           <div class="col-md-4 col-sm-12">
+                               <div class="action-btn pull-right">
+                                   <!-- Cart to show the added items - wow! -->
+                                   <div class="header-col">
+                                      <div class="options-block">
+                                          <a title="Checkout" href="#cart" class="options-btn cart-btn links-btn" data-label="Cart" data-target="#checkout_popup">
+                                            <span class="sr-only">Cart</span>
+                                            <i class="fa fa-shopping-cart hidden"></i>
+                                            <img src="img/icons/shopping-cart.svg" width="16" style="display: inline-block;">
+                                            <span class="peg cartItemCount" data-items="3">5</span>
+                                          </a>
+
+                                          <div class="popup-dialog go-left" id="checkout_popup">
+                                            <div class="bg-overlay"></div>
+                                            <div class="inner">
+                                              <header class="popup-header">
+                                                <h5 class="pull-left">
+                                                    <img src="img/icons/shopping-cart.svg" width="16" style="display: inline-block; margin-right: 10px;">  
+                                                    <span>Cart</span>
+                                                </h5>
+                                                <h5 class="close-btn text-right pull-right">
+                                                  <a href="#" data-target="#checkout_popup"><i class="fa fa-close"></i></a>
+                                                </h5>
+                                                <div class="clearfix"></div>
+                                              </header>
+                                              
+                                              <!-- Cart details -->
+                                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mauris lectus, rhoncus quis cursus sed, egestas ut nulla. </p>
+                                            </div>
+                                          </div>
+
+                                      </div>
+                                   </div>
+                               </div>
+                           </div>
+
+                       </div>
+                   </div>
+               </aside>
+
                  <div class="row" style="padding: 2em 0;">
                  <!-- Service Item -->
                  <div class="services-list-col col-md-3 col-sm-6 col-xs-12">

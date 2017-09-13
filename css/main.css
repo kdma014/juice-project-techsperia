@@ -600,7 +600,7 @@ HEADER AND MAIN NAV
 
 
     #action_btns_stripe {
-        margin-top: -70px;
+        margin-top: -50px;
     }
 
     #action_btns_stripe .action-btn {
@@ -638,7 +638,7 @@ HEADER AND MAIN NAV
 
 #services_page .services-list .services-title-box {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 0;
 }
 
 #services_page .services-list .services-title-box h2 {
@@ -748,11 +748,11 @@ HEADER AND MAIN NAV
 .service-infowindow .services-item-block .inner {
     position: relative;
     max-width: 80%;
-    min-height: 160px;
+    min-height: 150px;
     margin: 10px 20px;
     margin-bottom: 60px;
     padding: 20px;
-    background-color: #ffff6c;
+    background-color: #ffff5a;
 }
 
 .service-infowindow .services-item-block.white .inner {
@@ -764,6 +764,7 @@ HEADER AND MAIN NAV
 }
 
 .service-infowindow .services-item-block h4 {
+    margin-top: 0;
     font-weight: 600;
     font-size: 1.15em;
 }
