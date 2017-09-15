@@ -73,30 +73,100 @@
 
    <main class="main-section page-main-area" id="products_page">
 
-     <header class="section-header product-page-header" id="products_page_slide" style="background-color: #ffff5a;">
-         <div class="container-fluid">
+     <header class="section-header product-page-header" id="products_page_slide" style="height: 320px; opacity: 0;">
 
-             <!-- owl carousel-->
+         <div class="products-slide-background">
+           <div id="solid_yellow_bg">
+             <div class="container" style="position: relative; height: 100%;">
+               <div id="pink_oval_layer" class="visible-md visible-lg" data-animation="animated zoomIn"></div>
+             </div>
+               <div id="pink_oval_layer_2" class="visible-sm visible-xs"></div>
+           </div>
+         </div>
+
+
+         <div class="container-fluid">
+             <!-- 
+             @ PRODUCT PAGE OFFERS AND SHOWCASE CAROUSEL
+             -->
              <div class="owl-carousel products-slide" id="products_slide_1">
 
-                 <div class="owl-item">
-                   <div class="product-slide-inner">
-                     <h1 data-animation="animated fadeInRight">Slide 1</h1>
-                     <p data-animation="animated fadeInDown">Some paragraphs. Lorem ipsum doler sit amet.</p>
+                 <div class="owl-item" style="float: none;">
+                   <div class="product-slide-inner slide_item_1">
+                     <div class="container">
+                       <div class="row">
+                         <div class="col-md-5 text-col">
+                           <p class="big" data-animation="animated fadeInUp">Offer name and description. This is the space for offers. Have the code ABHI123 here and price for Rs. 599 only</p>
+                           <p class="big" data-animation="animated fadeInDown"><a href="#buynow" class="link-highlighted inverted buy-now-btn"><b>Buy now</b></a></p>
+                         </div>
+                         <div class="col-md-2 visible-md visible-lg offset-col"></div>
+                         <div class="col-md-4 image-col">
+                          <div class="image-container">
+                            <img class="img-responsive" width="320" data-animation="" src="images/product-images/products_mock_slide_360px.png">
+                          </div>
+                         </div>
+                       </div>
+                     </div>
                    </div>
                  </div>
 
-                 <div class="owl-item">
-                   <div class="product-slide-inner">
-                     <h1 data-animation="animated fadeInRight">Slide 1</h1>
-                     <p data-animation="animated fadeInDown">Some paragraphs. Lorem ipsum doler sit amet.</p>
+                 <div class="owl-item" style="float: none;">
+                   <div class="product-slide-inner slide_item_1">
+                     <div class="container">
+                       <div class="row">
+                         <div class="col-md-5 text-col">
+                           <p class="big" data-animation="animated fadeInUp">Offer name and description. This is the space for offers. Have the code ABHI123 here and price for Rs. 599 only</p>
+                           <p class="big" data-animation="animated fadeInDown"><a href="#buynow" class="link-highlighted inverted buy-now-btn"><b>Buy now</b></a></p>
+                         </div>
+                         <div class="col-md-2 visible-md visible-lg offset-col"></div>
+                         <div class="col-md-4 image-col">
+                          <div class="image-container">
+                            <img class="img-responsive" width="320" data-animation="" src="images/product-images/products_mock_slide_360px.png">
+                          </div>
+                         </div>
+                       </div>
+                     </div>
                    </div>
                  </div>
 
-                 <div class="owl-item">
-                   <div class="product-slide-inner">
-                     <h1 data-animation="animated fadeInRight">Slide 1</h1>
-                     <p data-animation="animated fadeInDown">Some paragraphs. Lorem ipsum doler sit amet.</p>
+
+                 <div class="owl-item" style="float: none;">
+                   <div class="product-slide-inner slide_item_1">
+                     <div class="container">
+                       <div class="row">
+                         <div class="col-md-5 text-col">
+                           <p class="big" data-animation="animated fadeInUp">Offer name and description. This is the space for offers. Have the code ABHI123 here and price for Rs. 599 only</p>
+                           <p class="big" data-animation="animated fadeInDown"><a href="#buynow" class="link-highlighted inverted buy-now-btn"><b>Buy now</b></a></p>
+                         </div>
+                         <div class="col-md-2 visible-md visible-lg offset-col"></div>
+                         <div class="col-md-4 image-col">
+                          <div class="image-container">
+                            <img class="img-responsive" width="320" data-animation="" src="images/product-images/products_mock_slide_360px.png">
+                          </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+
+
+
+                 <div class="owl-item" style="float: none;">
+                   <div class="product-slide-inner slide_item_1">
+                     <div class="container">
+                       <div class="row">
+                         <div class="col-md-5 text-col">
+                           <p class="big" data-animation="animated fadeInUp">Offer name and description. This is the space for offers. Have the code ABHI123 here and price for Rs. 599 only</p>
+                           <p class="big" data-animation="animated fadeInDown"><a href="#buynow" class="link-highlighted inverted buy-now-btn"><b>Buy now</b></a></p>
+                         </div>
+                         <div class="col-md-2 visible-md visible-lg offset-col"></div>
+                         <div class="col-md-4 image-col">
+                          <div class="image-container">
+                            <img class="img-responsive" width="320" data-animation="" src="images/product-images/products_mock_slide_360px.png">
+                          </div>
+                         </div>
+                       </div>
+                     </div>
                    </div>
                  </div>
 
@@ -205,6 +275,7 @@
                        <div class="popup-dialog" id="checkout_popup">
                          <div class="bg-overlay"></div>
                          <div class="inner">
+
                            <header class="popup-header">
                              <h5 class="pull-left">
                                  <img src="img/icons/shopping-cart.svg" width="16" style="display: inline-block; margin-right: 10px;">  
@@ -217,7 +288,127 @@
                            </header>
                            
                            <!-- Cart details -->
-                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mauris lectus, rhoncus quis cursus sed, egestas ut nulla. </p>
+                           
+                           <!-- The cart box - put all the necessary form here and use the checkout button to submit the form -->
+                           <div class="cart-box">
+                             <div class="cart-box-inner">
+                               
+                               <!-- 1 product item in cart -->
+                               <article class="item-block product-block" id="cart_product_1">
+
+                                 <div class="row">
+                                   <div class="col-xs-3 product-cart-image">
+                                     <div class="img-container">
+                                       <div class="background-oval"></div>
+                                       <img src="images/product-images/shampoo_3_128px.png" class="img-responsive">
+                                     </div>
+                                   </div>
+
+                                   <div class="col-xs-7 product-detail">
+                                    <h3 class="product-title">LYN Hair Shampoo</h3>
+                                    <table class="price-discounts-table table">
+                                      <tbody>
+                                        <tr class="tr_quantity">
+                                          <td class="tr_label">Quantity</td>
+                                          <td class="tr_value"><input class="item-quantity" type="number" disabled="" value="1"></td>
+                                        </tr>
+                                        <tr class="tr_price">
+                                          <td class="tr_label">Price</td>
+                                          <td class="tr_value">Rs. <span class="value">889</span></td>
+                                        </tr>
+
+                                        <tr class="tr_discount">
+                                          <td class="tr_label">Discount</td>
+                                          <td class="tr_value">Rs. <span class="value">334</span> (5%)</td>
+                                        </tr>
+
+                                        <tr class="tr_product_total big">
+                                          <td class="tr_label">Total</td>
+                                          <td class="tr_value">Rs. <span class="value">588</span></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                   </div>
+
+                                   <div class="col-xs-2 product-edit">
+                                    <div class="item-edit-options">
+                                      <ul>
+                                        <li><a class="product-cart-item-edit edit-item" href="#edit"><i class="fa fa-fw fa-pencil"></i></a></li>
+                                        <li><a class="product-cart-item-edit delete-item" href="#delete"><i class="fa fa-fw fa-trash-o"></i></a></li>
+                                      </ul>
+                                    </div>
+                                   </div>
+
+                                 </div>
+                               </article>
+
+
+                               <!-- 2 product item in cart -->
+                               <article class="item-block product-block" id="cart_product_2">
+                                 <div class="row">
+                                   <div class="col-xs-3 product-cart-image">
+                                     <div class="img-container">
+                                       <div class="background-oval"></div>
+                                       <img src="images/product-images/shampoo_3_128px.png" class="img-responsive">
+                                     </div>
+                                   </div>
+
+                                   <div class="col-xs-7 product-detail">
+                                    <h3 class="product-title">LYN Hair Shampoo</h3>
+                                    <table class="price-discounts-table table">
+                                      <tbody>
+                                        <tr class="tr_quantity">
+                                          <td class="tr_label">Quantity</td>
+                                          <td class="tr_value"><input class="item-quantity" type="number" disabled="" value="1"></td>
+                                        </tr>
+                                        <tr class="tr_price">
+                                          <td class="tr_label">Price</td>
+                                          <td class="tr_value">Rs. <span class="value">889</span></td>
+                                        </tr>
+
+                                        <tr class="tr_discount">
+                                          <td class="tr_label">Discount</td>
+                                          <td class="tr_value">Rs. <span class="value">334</span> (5%)</td>
+                                        </tr>
+
+                                        <tr class="tr_product_total big">
+                                          <td class="tr_label">Total</td>
+                                          <td class="tr_value">Rs. <span class="value">588</span></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                   </div>
+
+                                   <div class="col-xs-2 product-edit">
+                                    <div class="item-edit-options">
+                                      <ul>
+                                        <li><a class="product-cart-item-edit edit-item" href="#edit"><i class="fa fa-fw fa-pencil"></i></a></li>
+                                        <li><a class="product-cart-item-edit delete-item" href="#delete"><i class="fa fa-fw fa-trash-o"></i></a></li>
+                                      </ul>
+                                    </div>
+                                   </div>
+
+                                 </div>
+                               </article>
+
+
+                               <!-- Checkout Button Area -->
+                               <article class="item-block">
+                                 <div class="row">
+                                   <div class="col-xs-3"></div>
+                                   <div class="col-xs-7">
+                                     <!-- checkout button -->
+                                     <div class="item-block checkout-button">
+                                       <a href="#checkout" class="links-btn cart-checkout-btn">Checkout</a>
+                                     </div>
+
+                                   </div>
+                                 </div>
+                               </article>
+
+                             </div>
+                           </div> <!-- #cart box end -->
+
                          </div>
                        </div>
                        

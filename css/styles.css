@@ -55,6 +55,10 @@ h1, h2, h3, h4, h5, h6,
 	font-family: "Montserrat", "Oxygen", "Open Sans", Helvetica, Arial, sans-serif;
 }
 
+.big {
+  font-size: 21px;
+}
+
 
 /*************************************************
 Theme
@@ -204,7 +208,7 @@ Theme
 }
 
 .links-btn.btn-shadow__yellow {
-	box-shadow: 3px 3px 0 #ffff5a;
+	box-shadow: 3px 3px 0 #ffff3d;
 }
 
 .links-btn.btn-shadow__pink {
@@ -248,7 +252,7 @@ Theme
 
 
 .link-highlighted.pink::before {
-	background-color: #ffff5a;
+	background-color: #ffff3d;
 }
 
 .link-highlighted.black::before {
@@ -659,7 +663,7 @@ Components: Image Card
 
 /* Yellow */
 .image-card.yellow .caption-image-card {
-	background-color: #ffff5a;
+	background-color: #ffff3d;
 	color: #111;
 }
 
@@ -699,7 +703,7 @@ Components: Image Card
 	right: 0;
 	bottom: 0;
 
-	background-color: rgba(255, 255, 90, 0.73);
+	background-color: rgba(255, 255, 61, 0.75);
 	color: #111;
 	font-weight: 600;
 	font-family: "Montserrat";
@@ -759,7 +763,7 @@ Components: Image Card
     text-decoration: none;
 
     border: 2px solid #111;
-    box-shadow: 4px 4px 0 #ffff5a;
+    box-shadow: 4px 4px 0 #ffff3d;
 
     /* Vertically align inner content */
     max-width: 100%;
@@ -834,7 +838,7 @@ Components: Image Card
     margin: 10px 20px;
     margin-bottom: 60px;
     padding: 20px;
-    background-color: #ffff5a;
+    background-color: #ffff3d;
 }
 
 .infowindow .item-block.white .inner {

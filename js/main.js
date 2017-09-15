@@ -129,10 +129,17 @@ $( document ).ready(function(){
 	/****************************************
 	jQuery Script for `Product` page
 	*****************************************/
+
 	/*
 	* Header Carousel
 	*/
 
+    $("#products_slide_1").on("initialized.owl.carousel", function(e){
+		console.log("initialized owl carousel productsCarousel");
+		var $productsSlider = $("#products_page_slide");
+		    $productsSlider.css({'height': 'initial'});
+		    $productsSlider.animate({'opacity': 1});
+	});
 
 	var productsCarousel = $("#products_slide_1").owlCarousel({
 	    loop:true,
@@ -140,6 +147,7 @@ $( document ).ready(function(){
 	    nav:true,
 	    dots:false, 
 	    items: 1,
+	    loop: false,
 	    responsive:{
 	        0:{
 	            items:1
@@ -155,11 +163,13 @@ $( document ).ready(function(){
 	    }
 	});
 
-
 	productsCarousel.on("changed.owl.carousel", function(e){
-		console.log( e );
+		// console.log( e );
 		var $animatingElems = $(e.relatedTarget.$element).find("[data-animation ^= 'animated']");
+        var $animatingBgElemtns = $("#pink_oval_layer");
+
 		doAnimations( $animatingElems );
+		doAnimations( $animatingBgElemtns );
 	});
 
 
@@ -265,7 +275,9 @@ $( document ).ready(function(){
 
 		if ( target_infoWindow ) {
 			_currentInfoWindow_ = target_infoWindow;
+
 			$( _infoWindowLinks ).animate({ opacity: 0 });
+
 			window.setTimeout(function(){
 				$( target_infoWindow ).removeAttr("hidden");
 				$( target_infoWindow ).addClass("active");
@@ -285,9 +297,10 @@ $( document ).ready(function(){
 	var _sub_currentInfoWindow_;
 
 	$( _sub_infoWindowLinks ).on('click', function(e){
+
 		var target_infoWindow = $(this).attr("data-target");
 
-		if ( target_infoWindow ) {
+		if ( $(target_infoWindow).length > 0 ) {
 
 			_sub_currentInfoWindow_ = $(target_infoWindow);
 
@@ -304,7 +317,6 @@ $( document ).ready(function(){
 
 			e.preventDefault();
 		}
-
 
 	});
 
@@ -334,7 +346,6 @@ $( document ).ready(function(){
 				$( _infoWindowLinks ).animate({ opacity: 1 });
 		     	_currentInfoWindow_ = undefined;
 			}
-
 
 		e.preventDefault();
 	});
