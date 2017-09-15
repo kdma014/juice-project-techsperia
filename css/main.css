@@ -379,6 +379,62 @@ HEADER AND MAIN NAV
 * Home Page
 *---------------------------/
 
+/*
+* Main Page Slider
+*/
+.home-main-slide {
+    background-color: #111;
+}
+
+.home-main-slide .owl-item .slide-inner {
+  padding: 0 80px;
+  margin: 0 auto;
+  max-width: 1180px;
+
+  /* The slide will be white on black */
+  background-color: #111;
+  color: #fff;
+}
+
+.home-main-slide .owl-item .slide-inner a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.home-main-slide .owl-nav {} 
+
+.home-main-slide .owl-nav .owl-prev, 
+.home-main-slide .owl-nav .owl-next {
+    position: absolute;
+    width: 40px;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    text-indent: -99999px;
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDQwOCA0MDgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQwOCA0MDg7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8ZyBpZD0iYXJyb3ctZm9yd2FyZCI+CgkJPHBvbHlnb24gcG9pbnRzPSIyMDQsMCAxNjguMywzNS43IDMxMS4xLDE3OC41IDAsMTc4LjUgMCwyMjkuNSAzMTEuMSwyMjkuNSAxNjguMywzNzIuMyAyMDQsNDA4IDQwOCwyMDQgICAiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+} 
+
+
+.home-main-slide .owl-nav .owl-next {
+    right: 20px;
+    left: initial;
+}
+
+/* Using the next icon as the prev */
+.home-main-slide .owl-nav .owl-prev {
+  transform: rotateZ(-180deg);
+}
+
+.home-main-slide .owl-nav .owl-prev.disabled, 
+.home-main-slide .owl-nav .owl-next.disabled {
+    display: none;
+}
+
+
 
 
 

@@ -17,6 +17,32 @@ $( document ).ready(function(){
 	*****************************************/
 
 	/*
+	* Homepage Main Slider
+	*/
+
+	var homepageCarouselMain = $("#home_slider_1").owlCarousel({
+	    loop:true,
+	    margin: 60,
+	    nav:true,
+	    dots:false, 
+	    items: 1,
+	    loop: false,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+
+	        600:{
+	            items:1
+	        },
+
+	        1000:{
+	            items:1
+	        }
+	    }
+	});
+
+	/*
 	* Instagram Testimonials Slide
 	*/
 
