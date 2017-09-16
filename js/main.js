@@ -340,6 +340,47 @@ $( document ).ready(function(){
 
 
 
+	/*
+	* Academy page slider 
+	*/
+	$("#academy_page_slider").on("initialized.owl.carousel", function(e){
+		var $academyPageSlider = $("#academy_page_slider");
+		    $academyPageSlider.css({'height': 'initial'});
+		    $academyPageSlider.animate({'opacity': 1});
+	});
+
+
+	var academyPageSliderMain = $("#academy_page_slider").owlCarousel({
+	    loop:true,
+	    margin: 0,
+	    nav: false,
+	    dots:true, 
+	    items: 1,
+	    loop: false,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+
+	        600:{
+	            items:1
+	        },
+
+	        1000:{
+	            items:1
+	        }
+	    }
+	});
+
+
+	academyPageSliderMain .on("changed.owl.carousel", function(e){
+		var $animatingElems = $(e.relatedTarget.$element).find("[data-animation ^= 'animated']");
+		doAnimations( $animatingElems );
+	});
+
+
+
+
 
 
 	/* InfoWindow Open / Close Controller */

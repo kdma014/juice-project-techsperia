@@ -755,6 +755,53 @@ HEADER AND MAIN NAV
     color: #fff;
 }
 
+/* Academy Page Slider */
+
+#academy_page_slider .owl-item {}
+#academy_page_slider .owl-item .slide-inner {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 360px;
+}
+
+#academy_page_slider .bg-image-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+#academy_page_slider .owl-item .slide-inner .text-col {
+  font-size: 1.5em;
+
+  /* Text Shadow */
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+}
+
+#academy_page_slider .owl-dots {
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  right: 0;
+}
+
+
+
+
+
 #academy_page .academy-list .academy-title-box {
     text-align: center;
 }
@@ -771,6 +818,8 @@ HEADER AND MAIN NAV
     color: #fff;
     border-radius: 0 0 10px 10px;
 }
+
+
 
 
 /* Flexbox header title to support buttons on the left and right corners */

@@ -9,7 +9,7 @@ function initMap() {
 
    var map;
    var markers = [];	
-   var mumbai = {lat: 19.076,lng: 72.877};
+   var mumbai = {lat: 18.911,lng: 72.877};
    var juiceMarkerIcon = "img/icons/maps-logo-marker-2_smaller.png";
 
 
@@ -44,7 +44,8 @@ function initMap() {
   		"contact": markersData[i].contact,
   		"mapsUrl": markersData[i].mapsUrl,
   		"lat": markersData[i].lat,
-  		"lng": markersData[i].lng
+  		"lng": markersData[i].lng,
+      "id": markersData[i].id
   	};
       
       // create the contentString
@@ -66,7 +67,8 @@ function initMap() {
     _marker = new google.maps.Marker({
       position: new google.maps.LatLng( this_place.lat ,  this_place.lng),
       map: map,
-      icon: juiceMarkerIcon
+      icon: juiceMarkerIcon,
+      id: this_place.id
     });
 
     _markers_arr.push( _marker ); glob_markers = _markers_arr;
@@ -96,14 +98,14 @@ function initMap() {
 
   // Bias the SearchBox results towards current map's viewport.
   map.addListener('bounds_changed', function() {
-      searchBox.setBounds(map.getBounds());
+      searchBox.setBounds( map.getBounds() );
   });   
 
 
-
-
   var markers = [];
+
   searchBox.addListener('places_changed', function() {
+
     var places = searchBox.getPlaces();
 
     if (places.length == 0) {
@@ -151,22 +153,45 @@ function initMap() {
         bounds.extend(place.geometry.location);
       }
     });
+
     map.fitBounds(bounds);
   });
 
 
-  // Button click
+  /*
+  * Update Salon Location boxes on changes
+  */
+
+  map.addListener("bounds_changed", function(e){
+
+    console.log("bounds changed");
+
+    var markersIdShow = [];
+
+    for (var i = _markers_arr.length - 1; i >= 0; i--) {
+      var currentMarker = _markers_arr[i];
+      if ( map.getBounds().contains( currentMarker.getPosition() ) ) {
+        markersIdShow.push( currentMarker.get("id") ) ;
+        console.log( currentMarker.get("id") + " is in bounds" );
+      }
+    }
+
+    // Show salon list items
+    show_salonList_item( markersIdShow );
+
+  });
+
+
+  // Button click to search for entered keyword
   document.getElementById('location_search_submit').onclick = function () {
       var _input = input;
+
       google.maps.event.trigger(_input, 'focus')
       google.maps.event.trigger(_input, 'keydown', { keyCode: 13 });
   };
 
 
 }
-
-
-
 
 
 
@@ -182,6 +207,7 @@ $(document).ready(function(){
 
 	// Submitting Location
 	$("#location_search_submit").on("click", function(){
+
 		var e = jQuery.Event("keypress");
 		    e.which = 13; // Enter
 		    $('locationName').trigger(e);
@@ -202,6 +228,21 @@ $(document).ready(function(){
 
 
 
+function show_salonList_item( var_ids ) {
+
+  var ids = var_ids;
+
+  // First hide all of the salon boxes
+  $(".salon-location-item").addClass("hidden");
+
+  // Then show the Salon location boxes according to the visible markers
+  for (var i = ids.length - 1; i >= 0; i--) {
+    $( "#juice_salon_id_" + ids[i] ).removeClass("hidden");
+  }
+
+  return 0;
+};
+
 
 function salon_salonList( data, container ) {
 
@@ -215,7 +256,7 @@ function salon_salonList( data, container ) {
 	*/
 
     var salon_item_box = document.createElement('div');    
-        salon_item_box.classList.value = "col-sm-6 col-md-4 salon-location-item animated fadeIn";
+        salon_item_box.classList.value = "col-sm-6 col-md-4 salon-location-item animated fadeIn hidden";
         salon_item_box.id              = "juice_salon_id_" + data.id; 
         salon_item_box.innerHTML       =   '<div class="inner">' 
                                           +' <h3 class="salon-name">'+ data.name +'</h3>'
@@ -230,6 +271,34 @@ function salon_salonList( data, container ) {
 }
 
 
+
+/* Finds the nearest marker */
+function rad(x) {return x*Math.PI/180;}
+
+function find_closest_marker( event ) {
+
+    var lat = event.latLng.lat();
+    var lng = event.latLng.lng();
+    var R = 6371; // radius of earth in km
+    var distances = [];
+    var closest = -1;
+    for( i=0; i<map.markers.length; i++ ) {
+        var mlat = map.markers[i].position.lat();
+        var mlng = map.markers[i].position.lng();
+        var dLat  = rad(mlat - lat);
+        var dLong = rad(mlng - lng);
+        var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.cos(rad(lat)) * Math.cos(rad(lat)) * Math.sin(dLong/2) * Math.sin(dLong/2);
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        var d = R * c;
+        distances[i] = d;
+        if ( closest == -1 || d < distances[closest] ) {
+            closest = i;
+        }
+    }
+
+    alert(map.markers[closest].title);
+}
 
 
 /**************************************************
@@ -248,6 +317,7 @@ var markersData = [{
             "lat": "19.227638",
             "lng": "77.209488",
          },
+
          {
             "id": "6",
             "name": "Juice Hair Salon",
@@ -257,6 +327,7 @@ var markersData = [{
             "lat": "19.227638",
             "lng": "72.852715",
          },
+
          {
             "id": "7",
             "name": "Juice Hair Salon",
