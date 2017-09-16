@@ -383,7 +383,7 @@ HEADER AND MAIN NAV
 * Main Page Slider
 */
 .home-main-slide {
-    background-color: #111;
+    background-color: #fff;
 }
 
 .home-main-slide .owl-item .slide-inner {
@@ -392,7 +392,6 @@ HEADER AND MAIN NAV
   max-width: 1180px;
 
   /* The slide will be white on black */
-  background-color: #111;
   color: #fff;
 }
 
@@ -402,16 +401,110 @@ HEADER AND MAIN NAV
 }
 
 
+/* Slide Inner Content and Styling */
+.home-main-slide .owl-item {
+  overflow: hidden;
+}
+.home-main-slide .owl-item .bg-image-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.home-main-slide .owl-item .slide-inner {
+  display: flex;
+  flex: 0 0 250px;
+  align-items: center;
+  height: 380px;
+}
+
+.home-main-slide .owl-item .slide-inner .text-col {
+  position: relative;
+  min-width: 210px;
+  width: 210px;
+
+  margin-top: 20px;
+}
+
+.home-main-slide .owl-item .slide-inner .text-col p {
+    margin-bottom: 20px;
+}
+
+.home-main-slide .owl-item .slide-inner .text-col p.btn-container {
+    margin-bottom: 0;
+}
+
+/*
+.home-main-slide .owl-item .slide-inner .text-col.right-align {
+    position: absolute;
+    right: 80px;
+}*/
+
+
+.home-main-slide .owl-item .slide-inner .bubble-container::before {
+  content: "";
+  width: 25%;
+  height: 100%;
+  background-color: rgba(55, 55, 39, 0.2);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius:  0 50% 50% 0%;
+
+  -webkit-transform: scale(1.6);
+  -moz-transform: scale(1.6);
+  transform: scale(1.6);
+
+  -webkit-transition: 0.2s all ease-in-out;
+  -moz-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.home-main-slide .owl-item .slide-inner .bubble-container.bubble-right::before {
+  right: 0;
+  left: initial;
+  top: 0;
+  border-radius: 50% 0 0 50%;
+}
+
+
+.home-main-slide .owl-item .slide-inner:hover .bubble-container::before {
+  background-color: rgba(55, 55, 39, 0.3);
+  -webkit-transform: scale(1.6) rotateZ(45deg);
+  -moz-transform: scale(1.6) rotateZ(45deg);
+  transform: scale(1.6) rotateZ(45deg);
+}
+
+
+
+
+
+
+/* slider nav */
+.home-main-slide .owl-dots {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .home-main-slide .owl-nav {} 
 
 .home-main-slide .owl-nav .owl-prev, 
 .home-main-slide .owl-nav .owl-next {
+    display: none;
     position: absolute;
     width: 40px;
     left: 20px;
     top: 0;
     bottom: 0;
-    text-indent: -99999px;
+    font-size: 0;
     background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDQwOCA0MDgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQwOCA0MDg7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8ZyBpZD0iYXJyb3ctZm9yd2FyZCI+CgkJPHBvbHlnb24gcG9pbnRzPSIyMDQsMCAxNjguMywzNS43IDMxMS4xLDE3OC41IDAsMTc4LjUgMCwyMjkuNSAzMTEuMSwyMjkuNSAxNjguMywzNzIuMyAyMDQsNDA4IDQwOCwyMDQgICAiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
     background-size: 40px;
     background-repeat: no-repeat;
@@ -434,6 +527,25 @@ HEADER AND MAIN NAV
     display: none;
 }
 
+
+@media (min-width: 420px) {
+    .home-main-slide .owl-nav .owl-prev, 
+    .home-main-slide .owl-nav .owl-next {
+        display: block;
+    }
+}
+
+@media (max-width: 976px) {
+
+  .home-main-slide .owl-item .slide-inner .bubble-container::before,
+  .home-main-slide .owl-item .slide-inner:hover .bubble-container::before {
+    width: 50%;
+    -webkit-transform: scale(2.6) rotateZ(0deg);
+    -moz-transform: scale(2.6) rotateZ(0deg);
+     transform: scale(2.6) rotateZ(0deg);
+  }
+
+}
 
 
 
@@ -685,8 +797,6 @@ HEADER AND MAIN NAV
         width: 110px;
     }
 
-
-
     #action_btns_stripe #checkout_popup {
         left: -0px;
         right: 0;
@@ -701,6 +811,10 @@ HEADER AND MAIN NAV
 /*---------------------------
 * Services Page
 ----------------------------*/
+.main-section .section-header.service-page-header {
+    padding-bottom: 4em;
+}
+
 #services_page .service-page-header {
     background-color: #111;
     color: #fff;
@@ -850,6 +964,115 @@ HEADER AND MAIN NAV
     bottom: -20px;
     right: 14px;
 }
+
+/*
+* Services Header Slide
+*/
+
+.services-promotion-slide {
+    padding: 1em 0;
+}
+
+
+#service_header_slider {
+
+}
+
+#service_header_slider .owl-item {
+  height: 210px;
+}
+
+#service_header_slider .owl-item .bg-layer-set,
+#service_header_slider .owl-item .bg-layer-set .bg-slide-image,
+#service_header_slider .owl-item .bg-layer-set .bg-overlay-color {
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0; 
+  bottom: 0;
+}
+
+#service_header_slider .owl-item .bg-layer-set .bg-slide-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#service_header_slider .owl-item .bg-layer-set .bg-overlay-color {
+  background-color: #000;
+  opacity: 0.8;
+}
+
+
+#service_header_slider .owl-item .inner {
+    position: relative;
+    padding: 0 20px;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#service_header_slider .owl-item .inner .text-col {
+  font-size: 1.15em;
+  width: 330px;
+}
+
+
+
+#service_header_slider .owl-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+@media (min-width: 993px) {
+    #services_page .service-page-header {
+        height: 450px;
+    }
+
+     .services-promotion-slide {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+}
+
+
+@media (min-width: 768px) {
+    .main-section .section-header.service-page-header {
+        padding-bottom: 4em;
+    }
+
+    .services-promotion-slide {
+        padding: 0;
+    }
+
+    #services_page .service-page-header {
+        height: 350px;
+    }
+
+
+    #service_header_slider .owl-item {
+      height: 350px;
+    }
+
+    #service_header_slider .owl-item .inner {
+        position: relative;
+        padding: 0 120px;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+}
+
+
 
 /*--------------------------
 * Salon Finder Page

@@ -20,11 +20,18 @@ $( document ).ready(function(){
 	* Homepage Main Slider
 	*/
 
+	$("#home_slider_1").on("initialized.owl.carousel", function(e){
+		var $homeCarouselSlider = $("#home_slider_1");
+		    $homeCarouselSlider.css({'height': 'initial'});
+		    $homeCarouselSlider.animate({'opacity': 1});
+	});
+
+
 	var homepageCarouselMain = $("#home_slider_1").owlCarousel({
 	    loop:true,
-	    margin: 60,
+	    margin: 0,
 	    nav:true,
-	    dots:false, 
+	    dots:true, 
 	    items: 1,
 	    loop: false,
 	    responsive:{
@@ -41,6 +48,15 @@ $( document ).ready(function(){
 	        }
 	    }
 	});
+
+
+	homepageCarouselMain.on("changed.owl.carousel", function(e){
+		var $animatingElems = $(e.relatedTarget.$element).find("[data-animation ^= 'animated']");
+		doAnimations( $animatingElems );
+	});
+
+
+
 
 	/*
 	* Instagram Testimonials Slide
@@ -85,7 +101,7 @@ $( document ).ready(function(){
 
 
 	igCarousel.on("changed.owl.carousel", function(e){
-		console.log( e );
+		// console.log( e );
 		var $animatingElems = $(e.relatedTarget.$element).find("[data-animation ^= 'animated']");
 		doAnimations( $animatingElems );
 	});
@@ -148,6 +164,43 @@ $( document ).ready(function(){
 
 
 		e.preventDefault();
+	});
+
+
+	/* Services page slider */
+	$("#service_header_slider").on("initialized.owl.carousel", function(e){
+		var $servicePromoSlider = $("#service_header_slider");
+		    $servicePromoSlider.css({'height': 'initial'});
+		    $servicePromoSlider.animate({'opacity': 1});
+	});
+
+
+	var servicePromoSliderMain = $("#service_header_slider").owlCarousel({
+	    loop:true,
+	    margin: 0,
+	    nav: false,
+	    dots:true, 
+	    items: 1,
+	    loop: false,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+
+	        600:{
+	            items:1
+	        },
+
+	        1000:{
+	            items:1
+	        }
+	    }
+	});
+
+
+	servicePromoSliderMain .on("changed.owl.carousel", function(e){
+		var $animatingElems = $(e.relatedTarget.$element).find("[data-animation ^= 'animated']");
+		doAnimations( $animatingElems );
 	});
 
 
