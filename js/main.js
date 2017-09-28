@@ -121,7 +121,51 @@ $( document ).ready(function(){
 			});
 		});
 	}
+	
+
+	/****************************************
+	jQuery Script for `Sign In` page
+	*****************************************/
+	$("#sign_up_link").on("click", function( e ){
+
+		// Close the sign-in section
+		$("#log_in_section").addClass("animated fadeOutLeft");
+		window.setTimeout(function(){
+			$("#log_in_section").hide();
+		}, 200);
+
+		// Open the sign-up section
+		$("#sign_up_section").css({'display': 'block'});
+		$("#sign_up_section").delay(200).removeClass("fadeOutLeft fadeOutRight").addClass("animated fadeInRight");
+
+
+		e.preventDefault();
+
+	});
+
+
+	closeSignUpForm
+
+	$("#closeSignUpForm").on("click", function( e ){
+
+
+		// Close the sign-up section
 		
+		$("#sign_up_section").removeClass("fadeInRight").addClass("animated fadeOutRight");
+
+		window.setTimeout(function(){
+			$("#sign_up_section").css({'display': 'none'});
+
+			// Open the sign-in section
+			$("#log_in_section").removeClass("fadeOutLeft").addClass("fadeInLeft");
+			$("#log_in_section").show();
+		},200);
+
+
+		e.preventDefault();
+
+	});
+
 
 	/****************************************
 	jQuery Script for `Services` page

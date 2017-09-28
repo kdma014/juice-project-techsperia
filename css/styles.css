@@ -64,6 +64,16 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
+/* Full Stretch Stylings */
+.bg-stretch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
 /*************************************************
 Theme
 @ Custom buttons 
@@ -332,7 +342,7 @@ Bootstrap Navigation Theme
 .form-general input[type="number"],
 .form-general input[type="tel"]{
   font-size: 1em;
-  padding: 0.75em 1em;
+  padding: 0.5em 1em;
   border: 1px solid #111;
   outline: 2px solid transparent;
   
