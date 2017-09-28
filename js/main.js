@@ -126,13 +126,13 @@ $( document ).ready(function(){
 	/****************************************
 	jQuery Script for `Sign In` page
 	*****************************************/
-	$("#sign_up_link").on("click", function( e ){
+	$("#sign_up_link").on("click touchdown", function( e ){
 
 		// Close the sign-in section
 		$("#log_in_section").addClass("animated fadeOutLeft");
 		window.setTimeout(function(){
 			$("#log_in_section").hide();
-		}, 200);
+		}, 400);
 
 		// Open the sign-up section
 		$("#sign_up_section").css({'display': 'block'});
@@ -144,9 +144,9 @@ $( document ).ready(function(){
 	});
 
 
-	closeSignUpForm
 
-	$("#closeSignUpForm").on("click", function( e ){
+
+	$("#closeSignUpForm").on("click touchdown", function( e ){
 
 
 		// Close the sign-up section
@@ -159,7 +159,7 @@ $( document ).ready(function(){
 			// Open the sign-in section
 			$("#log_in_section").removeClass("fadeOutLeft").addClass("fadeInLeft");
 			$("#log_in_section").show();
-		},200);
+		},400);
 
 
 		e.preventDefault();
