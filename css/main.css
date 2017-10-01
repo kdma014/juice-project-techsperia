@@ -2486,7 +2486,6 @@ PAGE STYLE: MY ACCOUNT, SERVICES ETC.
 
 
 
-
 .acc-video-item {
   max-width: 320px;
   margin: 1em auto;
@@ -2579,6 +2578,7 @@ PAGE STYLE: MY ACCOUNT, SERVICES ETC.
 }
 
 .acc-video-item .description {
+  padding: 0.5em 0;
   color: #666;
 }
 
@@ -2590,10 +2590,9 @@ PAGE STYLE: MY ACCOUNT, SERVICES ETC.
 
 
 
-
-
-
-/* Header Slider : Simple Slider 1; */
+/*
+* Header Slider : Simple Slider 1
+*/
 .slider-simple .owl-item .slide-inner {
     position: relative;
     text-align: center;
