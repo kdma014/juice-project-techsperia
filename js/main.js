@@ -107,20 +107,7 @@ $( document ).ready(function(){
 	});
 
 
-	// Slider Animation
-	function doAnimations( elems ) {
-		//Cache the animationend event in a variable
-		var animEndEv = 'webkitAnimationEnd animationend';
-		
-		elems.each(function () {
-			var $this = $(this),
-				$animationType = $this.attr('data-animation');
-
-			$this.addClass($animationType).one(animEndEv, function () {
-				$this.removeClass($animationType);
-			});
-		});
-	}
+	
 	
 
 	/****************************************
@@ -339,6 +326,47 @@ $( document ).ready(function(){
 	* Slides on the Product page
 	*/
 
+	/****************************************
+	jQuery Script for `Account` page
+	*****************************************/
+
+	   /*
+        * Account page slider 
+        */
+        $("#account_page_slider").on("initialized.owl.carousel", function(e){
+          var $accountPageSlider = $("#account_page_slider");
+              $accountPageSlider.css({'height': 'initial'});
+              $accountPageSlider.animate({'opacity': 1});
+        });
+
+
+        var accountPageSliderMain = $("#account_page_slider").owlCarousel({
+            loop:true,
+            margin: 0,
+            nav: false,
+            dots:true, 
+            items: 1,
+            loop: false,
+            responsive:{
+                0:{
+                    items:1
+                },
+
+                600:{
+                    items:1
+                },
+
+                1000:{
+                    items:1
+                }
+            }
+        });
+
+
+        accountPageSliderMain .on("changed.owl.carousel", function(e){
+          var $animatingElems = $(e.relatedTarget.$element).find("[data-animation ^= 'animated']");
+          doAnimations( $animatingElems );
+        });
 
 	/****************************************
 	jQuery Script for `Academy` page
@@ -514,6 +542,22 @@ $( document ).ready(function(){
 		e.preventDefault();
 	});
 
-
-
 });
+
+
+
+
+// Slider Animation
+function doAnimations( elems ) {
+	//Cache the animationend event in a variable
+	var animEndEv = 'webkitAnimationEnd animationend';
+	
+	elems.each(function () {
+		var $this = $(this),
+			$animationType = $this.attr('data-animation');
+
+		$this.addClass($animationType).one(animEndEv, function () {
+			$this.removeClass($animationType);
+		});
+	});
+}
